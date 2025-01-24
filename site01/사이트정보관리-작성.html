@@ -1,0 +1,1430 @@
+<!DOCTYPE html>
+<html class="fixed js flexbox flexboxlegacy no-touch csstransforms csstransforms3d no-overflowscrolling no-mobile-device custom-scroll"><head>
+
+<!-- Basic -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>언론보도 e뉴스라인</title>
+<meta http-equiv="X-UA-Compatible" content="IE=10">
+<meta name="description" content="기업PR기사,언론홍보,국내최저비용,네이버 다음 노출 ,언론보도 전문기업">
+<meta name="keywords" content="언론보도,언론보도 의뢰, 언론홍보마케팅, PR대행전문, 기사작성대행, 뉴스기사배포">
+<meta property="og:title" content="언론보도 e뉴스라인">
+<meta property="og:type" content="">
+<meta property="og:url" content="">
+<meta property="og:description" content="기업PR기사,언론홍보,국내최저비용,네이버 다음 노출 ,언론보도 전문기업">
+<meta property="og:image" content="">
+<meta name="google-site-verification" content="">
+<meta name="naver-site-verification" content="">
+
+<!-- Mobile Metas -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<!-- Favicons -->
+<link rel="shortcut icon" href="">
+<link rel="apple-touch-icon" href="">
+<link rel="apple-touch-icon" sizes="72x72" href="">
+<link rel="apple-touch-icon" sizes="114x114" href="">
+
+<!-- Web Fonts  -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light" type="text/css">
+<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/nanumbrushscript.css" type="text/css">
+<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css" type="text/css">
+<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css" type="text/css">
+<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css" type="text/css">
+<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/nanumpenscript.css" type="text/css">
+
+<!-- Vendor CSS -->
+<link rel="stylesheet" href="http://enewsline.co.kr/madmin/assets/vendor/bootstrap/css/bootstrap.css">
+
+<link rel="stylesheet" href="http://enewsline.co.kr/madmin/assets/vendor/font-awesome/css/font-awesome.css">
+<link rel="stylesheet" href="http://enewsline.co.kr/madmin/assets/vendor/magnific-popup/magnific-popup.css">
+<link rel="stylesheet" href="http://enewsline.co.kr/madmin/assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker3.css">
+
+<!-- Specific Page Vendor CSS -->
+<link rel="stylesheet" href="http://enewsline.co.kr/madmin/assets/vendor/jquery-ui/jquery-ui.css">
+<link rel="stylesheet" href="http://enewsline.co.kr/madmin/assets/vendor/jquery-ui/jquery-ui.theme.css">
+<link rel="stylesheet" href="http://enewsline.co.kr/madmin/assets/vendor/bootstrap-multiselect/bootstrap-multiselect.css">
+<link rel="stylesheet" href="http://enewsline.co.kr/madmin/assets/vendor/morris.js/morris.css">
+<link rel="stylesheet" href="http://enewsline.co.kr/madmin/assets/vendor/jstree/themes/default/style.css">
+<link rel="stylesheet" href="http://enewsline.co.kr/madmin/assets/vendor/bootstrap-fileupload/bootstrap-fileupload.min.css">
+<link rel="stylesheet" href="http://enewsline.co.kr/madmin/assets/vendor/dropzone/basic.css">
+<link rel="stylesheet" href="http://enewsline.co.kr/madmin/assets/vendor/dropzone/dropzone.css">
+<link rel="stylesheet" href="http://enewsline.co.kr/madmin/assets/vendor/codemirror/lib/codemirror.css">
+<link rel="stylesheet" href="http://enewsline.co.kr/madmin/assets/vendor/codemirror/theme/monokai.css">
+<link rel="stylesheet" href="http://enewsline.co.kr/madmin/assets/vendor/bootstrap-tagsinput/bootstrap-tagsinput.css">
+<link rel="stylesheet" href="http://enewsline.co.kr/madmin/assets/vendor/elusive-icons/css/elusive-icons.css">
+<link rel="stylesheet" href="http://enewsline.co.kr/madmin/assets/vendor/select2/css/select2.css">
+<link rel="stylesheet" href="http://enewsline.co.kr/madmin/assets/vendor/select2-bootstrap-theme/select2-bootstrap.css">
+<link rel="stylesheet" href="http://enewsline.co.kr/madmin/assets/vendor/bootstrap-colorpicker/css/bootstrap-colorpicker.css">
+<link rel="stylesheet" href="http://enewsline.co.kr/madmin/assets/vendor/bootstrap-timepicker/css/bootstrap-timepicker.css">
+<link rel="stylesheet" href="http://enewsline.co.kr/madmin/assets/vendor/bootstrap-markdown/css/bootstrap-markdown.min.css">
+<link rel="stylesheet" href="http://enewsline.co.kr/madmin/assets/vendor/summernote/summernote.css">
+
+
+
+<link href="http://enewsline.co.kr/osrc/uploadify/uploadify.css" rel="stylesheet" type="text/css">
+
+<!-- Theme CSS -->
+<link rel="stylesheet" href="http://enewsline.co.kr/madmin/assets/stylesheets/theme.css">
+
+<!-- Skin CSS -->
+<link rel="stylesheet" href="http://enewsline.co.kr/madmin/assets/stylesheets/skins/default.css">
+
+<!-- Theme Custom CSS -->
+<link rel="stylesheet" href="http://enewsline.co.kr/madmin/assets/stylesheets/theme-custom.css">
+
+<!-- Head Libs -->
+<script src="http://enewsline.co.kr/madmin/assets/vendor/modernizr/modernizr.js"></script>
+
+<script src="http://enewsline.co.kr/madmin/assets/vendor/jquery/jquery.js"></script>
+
+<script type="text/javascript">
+<!--
+$(function() {
+	/* 이미지, 위젯창 띄우기 시작 */
+	$('.btn-widget-click').click(function() {
+		var id = $(this).attr('id');
+		var ex_id = id.split('-');
+		var mode = ex_id[1];
+		var target_id = ex_id[2];
+		if(mode=='image') {
+			$.post("insert_image.php", "album_no=1&target_id="+target_id, function(data) {
+				$("#modal-layer").removeClass("modal-block");
+				$("#modal-layer").addClass("modal-block2");
+				$("#modal-layer .panel-title").text("이미지 삽입");
+				$("#modal-content").html(data);
+				$("#btn-modal-open").trigger("click");
+			});
+		}else if(mode=='image2') {
+			$.post("select_image.php", "album_no=1&target_id="+target_id, function(data) {
+				$("#modal-layer").removeClass("modal-block");
+				$("#modal-layer").addClass("modal-block2");
+				$("#modal-layer .panel-title").text("이미지 삽입");
+				$("#modal-content").html(data);
+				$("#btn-modal-open").trigger("click");
+			});
+		}else if(mode=='widget') {
+			var skin_no = $(this).attr("data-skin-no");
+			$.post("insert_widget.php", "skin_no="+skin_no+"&target_id="+target_id, function(data) {
+				$("#modal-layer").removeClass("modal-block2");
+				$("#modal-layer").addClass("modal-block");
+				$("#modal-layer .panel-title").text("언론보도 e뉴스라인's 위젯 삽입");
+				$('#modal-content').html(data);
+				$("#btn-modal-open").trigger("click");
+			});
+		}
+	});
+	/* 이미지, 위젯창 띄우기 끝 */
+});
+
+//-->
+</script>
+<style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;box-sizing: content-box;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style><style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style></head>
+<body>
+<section class="body">
+<!-- start: header -->
+<header class="header">
+<div class="logo-container">
+	<a href="../madmin/index.php" class="logo" style="font:bold 23px 'Nanum Gothic';">
+	언론보도 e뉴스라인	</a>
+	<div class="visible-xs toggle-sidebar-left" data-toggle-class="sidebar-left-opened" data-target="html" data-fire-event="sidebar-left-opened">
+		<i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+	</div>
+</div>
+
+<!-- start: search & user box -->
+<div class="header-right">
+	<span class="separator"></span>
+	<ul class="notifications">
+		<li>
+		<a href="#" class="dropdown-toggle notification-icon" data-toggle="dropdown">
+		<i class="fa fa-bell"></i>
+		<span class="badge">3</span>
+		</a>
+
+		<div class="dropdown-menu notification-menu">
+			<div class="notification-title">
+				<span class="pull-right label label-default">3</span>
+				Alerts
+			</div>
+
+			<div class="content">
+				<ul>
+					<li>
+					<a href="#" class="clearfix">
+					<div class="image">
+						<i class="fa fa-thumbs-down bg-danger"></i>
+					</div>
+					<span class="title">Server is Down!</span>
+					<span class="message">Just now</span>
+					</a>
+					</li>
+					<li>
+					<a href="#" class="clearfix">
+					<div class="image">
+						<i class="fa fa-lock bg-warning"></i>
+					</div>
+					<span class="title">User Locked</span>
+					<span class="message">15 minutes ago</span>
+					</a>
+					</li>
+					<li>
+					<a href="#" class="clearfix">
+					<div class="image">
+						<i class="fa fa-signal bg-success"></i>
+					</div>
+					<span class="title">Connection Restaured</span>
+					<span class="message">10/10/2014</span>
+					</a>
+					</li>
+				</ul>
+
+				<hr>
+
+				<div class="text-right">
+					<a href="#" class="view-more">View All</a>
+				</div>
+			</div>
+		</div>
+		</li>
+	</ul>
+
+	<span class="separator"></span>
+
+	<div id="userbox" class="userbox">
+		<a href="#" data-toggle="dropdown">
+		<figure class="profile-picture">
+		<img src="http://enewsline.co.kr/madmin/assets/images/!logged-user.jpg" alt="Joseph Doe" class="img-circle" data-lock-picture="http://enewsline.co.kr/madmin/assets/images/!logged-user.jpg">
+		</figure>
+		<div class="profile-info" data-lock-name="John Doe" data-lock-email="johndoe@okler.com">
+			<span class="name">본사전체관리자</span>
+			<span class="role">administrator</span>
+		</div>
+
+		<i class="fa custom-caret"></i>
+		</a>
+
+		<div class="dropdown-menu">
+			<ul class="list-unstyled">
+				<li class="divider"></li>
+				<li>
+				<a role="menuitem" tabindex="-1" href="pages-user-profile.html"><i class="fa fa-user"></i> My Profile</a>
+				</li>
+				<!--
+				<li>
+				<a role="menuitem" tabindex="-1" href="#" data-lock-screen="true"><i class="fa fa-lock"></i> Lock Screen</a>
+				</li>
+				-->
+				<li>
+				<a role="menuitem" tabindex="-1" href="logout_check.php"><i class="fa fa-power-off"></i> Logout</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- end: search & user box -->
+</header>
+<!-- end: header -->
+<div class="inner-wrapper">
+		<!-- start: sidebar -->
+	<aside id="sidebar-left" class="sidebar-left">
+
+	<div class="sidebar-header">
+		<div class="sidebar-title">
+			Menu
+		</div>
+		<div class="sidebar-toggle hidden-xs" data-toggle-class="sidebar-left-collapsed" data-target="html" data-fire-event="sidebar-left-toggle">
+			<i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+		</div>
+	</div>
+
+	<div class="nano has-scrollbar">
+		<div class="nano-content" tabindex="0" style="right: -17px;">
+			<!-- menu include -->
+						<nav id="menu" class="nav-main" role="navigation">
+			<ul class="nav nav-main">
+				<li class="">
+				<a href="index.php"><i class="fa fa-home" aria-hidden="true"></i> <span>Dashboard</span></a>
+				</li>
+				<li class="nav-parent nav-expanded nav-active">
+				<a><i class="fa fa-columns" aria-hidden="true"></i> <span>사이트 관리</span></a>
+				<ul class="nav nav-children">
+					<li class="">
+					<a href="index.php?page=agency_level">파트너사 레벨</a>
+					</li>
+					<li class="">
+					<a href="index.php?page=affiliates_level">제휴사 레벨</a>
+					</li>
+					<li class="">
+					<a href="index.php?page=manager">매니저 관리</a>
+					</li>
+					<!--
+					<li class="">
+					<a href="index.php?page=site_form&mode=modify&site_no=1">내사이트 관리</a>
+					</li>
+					-->
+					<li class="nav-active">
+					<a href="index.php?page=site_list">사이트 목록</a>
+					</li>
+					<!--
+					<li class="">
+					<a href="index.php?page=site_tree">사이트 관리</a>
+					</li>
+					-->
+					<li class="">
+					<a href="index.php?page=etc_db_best">DB 최적화</a>
+					</li>
+					<li class="">
+					<a href="index.php?page=etc_db_dump">DB 백업</a>
+					</li>
+				</ul>
+				</li>
+				<li class="nav-parent  ">
+				<a>
+				<i class="fa fa-copy" aria-hidden="true"></i>
+				<span>회원 관리</span>
+				</a>
+				<ul class="nav nav-children">
+					<li class="">
+					<a href="index.php?page=member_level">회원 레벨</a>
+					</li>
+					<li class="">
+					<a href="index.php?page=member_list">회원 목록</a>
+					</li>
+					<li class="">
+					<a href="index.php?page=connect_log">접속자 기록</a>
+					</li>
+				</ul>
+				</li>
+				<li class="nav-parent  ">
+				<a>
+				<i class="fa fa-tasks" aria-hidden="true"></i>
+				<span>디자인 관리</span>
+				</a>
+				<ul class="nav nav-children">
+					<li class="">
+					<a href="index.php?page=site_default">기본 설정</a>
+					</li>
+					<li class="">
+					<a href="index.php?page=skin_list">스킨 관리</a>
+					</li>
+					<li class="">
+					<a href="index.php?page=font_list">웹폰트 관리</a>
+					</li>
+					<li class="">
+					<a href="index.php?page=layout_list">레이아웃</a>
+					</li>
+					<li class="">
+					<a href="index.php?page=widget">위젯</a>
+					</li>
+				</ul>
+				</li>
+				<li class="">
+				<a href="index.php?page=module_list"><i class="fa fa-tasks" aria-hidden="true"></i><span>모듈</span></a>
+				</li>
+				<li class="nav-parent  ">
+				<a>
+				<i class="fa fa-list-alt" aria-hidden="true"></i>
+				<span>컨텐츠 관리</span>
+				</a>
+				<ul class="nav nav-children">
+					<li class="">
+					<a href="index.php?page=category_set">카테고리</a>
+					</li>
+					<li class="">
+					<a href="index.php?page=page">페이지</a>
+					</li>
+					<li class="">
+					<a href="index.php?page=media_image">이미지</a>
+					</li>
+					<li class="">
+					<a href="index.php?page=post">글</a>
+					</li>
+					<li class="">
+					<a href="index.php?page=comment">댓글</a>
+					</li>
+				</ul>
+				</li>
+<li class="nav-parent ">
+	<a href="http://enewsline.co.kr/madmin/index.php?mid=board&amp;page=list">
+	<i class="fa fa-list-alt" aria-hidden="true"></i>
+	<span>게시판</span>
+	</a>
+</li><li class="nav-parent ">
+	<a href="http://enewsline.co.kr/madmin/index.php?mid=sms&amp;page=sms_set" target="_self">
+	<i class="fa fa-list-alt" aria-hidden="true"></i>
+	<span>SMS 관리</span>
+	</a>
+	<ul class="nav nav-children">
+	<li class=""><a href="http://enewsline.co.kr/madmin/index.php?mid=sms&amp;page=sms_set" target="_self">SMS 설정</a></li>
+	<li class=""><a href="http://enewsline.co.kr/madmin/index.php?mid=sms&amp;page=all_sms" target="_self">SMS 보내기</a></li>
+	<li><a href="http://zzem.co.kr" target="_blank">SMS 충전</a></li>
+	</ul>
+</li><li class="nav-parent ">
+	<a>
+	<i class="fa fa-list-alt" aria-hidden="true"></i>
+	<span>Newsix관리</span>
+	</a>
+	<ul class="nav nav-children">
+	<li class=""><a href="http://enewsline.co.kr/madmin/index.php?mid=newsix&amp;page=group" target="_self">그룹 관리</a></li>
+	<li class=""><a href="http://enewsline.co.kr/madmin/index.php?mid=newsix&amp;page=category" target="_self">카테고리 관리</a></li>
+	<li class=""><a href="http://enewsline.co.kr/madmin/index.php?mid=newsix&amp;page=item" target="_self">언론사 관리</a></li>
+	</ul>
+</li>
+<li class="nav-parent ">
+	<a>
+	<i class="fa fa-list-alt" aria-hidden="true"></i>
+	<span>포인트관리</span>
+	</a>
+	<ul class="nav nav-children">
+	<li class=""><a href="http://enewsline.co.kr/madmin/index.php?mid=newsix&amp;page=point_order" target="_self">포인트충전 신청관리</a></li>
+	<li class=""><a href="http://enewsline.co.kr/madmin/index.php?mid=newsix&amp;page=point_history" target="_self">회원(사) 포인트기록</a></li>
+		</ul>
+</li>
+<li class="">
+	<a href="http://enewsline.co.kr/madmin/index.php?mid=newsix&amp;page=order" target="_self">
+	<i class="fa fa-list-alt" aria-hidden="true"></i>
+	<span>보도신청관리</span>
+	</a>
+</li>
+<li class="">
+	<a href="http://enewsline.co.kr/madmin/index.php?mid=newsix&amp;page=estimate" target="_self">
+	<i class="fa fa-list-alt" aria-hidden="true"></i>
+	<span>견적문의&amp;상담</span>
+	</a>
+</li>
+<li class="">
+	<a href="http://enewsline.co.kr/madmin/index.php?mid=newsix&amp;page=sales_status" target="_self">
+	<i class="fa fa-list-alt" aria-hidden="true"></i>
+	<span>매출이익통계</span>
+	</a>
+</li>			</ul>
+			</nav>
+			<hr class="separator">
+			<!--
+			<div class="sidebar-widget widget-tasks">
+				<div class="widget-header">
+					<h6>Projects</h6>
+					<div class="widget-toggle">+</div>
+				</div>
+				<div class="widget-content">
+					<ul class="list-unstyled m-none">
+						<li><a href="#">Porto HTML5 Template</a></li>
+						<li><a href="#">Tucson Template</a></li>
+						<li><a href="#">Porto Admin</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<hr class="separator" />
+
+			<div class="sidebar-widget widget-stats">
+				<div class="widget-header">
+					<h6>Company Stats</h6>
+					<div class="widget-toggle">+</div>
+				</div>
+				<div class="widget-content">
+					<ul>
+						<li>
+						<span class="stats-title">Stat 1</span>
+						<span class="stats-complete">85%</span>
+						<div class="progress">
+							<div class="progress-bar progress-bar-primary progress-without-number" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%;">
+								<span class="sr-only">85% Complete</span>
+							</div>
+						</div>
+						</li>
+						<li>
+						<span class="stats-title">Stat 2</span>
+						<span class="stats-complete">70%</span>
+						<div class="progress">
+							<div class="progress-bar progress-bar-primary progress-without-number" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
+								<span class="sr-only">70% Complete</span>
+							</div>
+						</div>
+						</li>
+						<li>
+						<span class="stats-title">Stat 3</span>
+						<span class="stats-complete">2%</span>
+						<div class="progress">
+							<div class="progress-bar progress-bar-primary progress-without-number" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" style="width: 2%;">
+								<span class="sr-only">2% Complete</span>
+							</div>
+						</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			-->
+		</div>
+
+		<script>
+		// Preserve Scroll Position
+		if (typeof localStorage !== 'undefined') {
+			if (localStorage.getItem('sidebar-left-position') !== null) {
+				var initialPosition = localStorage.getItem('sidebar-left-position'),
+				sidebarLeft = document.querySelector('#sidebar-left .nano-content');
+
+				sidebarLeft.scrollTop = initialPosition;
+			}
+		}
+		</script>
+
+	<div class="nano-pane" style="opacity: 1; visibility: visible; display: block;"><div class="nano-slider" style="height: 167px; transform: translate(0px, 0px);"></div></div></div>
+
+	</aside>
+	<!-- end: sidebar -->
+
+	<section role="main" class="content-body">
+		<header class="page-header">
+		<h2>Dashboard</h2>
+
+		<div class="right-wrapper pull-right">
+			<ol class="breadcrumbs">
+				<li>
+				<a href="index.html">
+				<i class="fa fa-home"></i>
+				</a>
+				</li>
+				<li><span>Dashboard</span></li>
+			</ol>
+
+			<a class="sidebar-right-toggle" data-open="sidebar-right"><i class="fa fa-chevron-left"></i></a>
+		</div>
+		</header>
+	<script type="text/javascript">
+<!--
+$(document).ready(function(){
+	$("#skin_no > option[value='1']").attr("selected", "true");
+	$("#level_no > option[value='0']").attr("selected", "true");
+	$(".btn-save").click(function() {
+		$.post("site_ok.php", $("#site_form").serialize(), function(data) {
+			if(data == '1') {
+				alert("저장되었습니다.");
+							}else if(data) {
+				alert(data);
+			}else {
+				alert("실패했습니다.");
+			}
+		});
+	});
+	$(".site_type").click(function() {
+		var site_type = $(this).val();
+		$.post("get_level.php", "site_type="+site_type, function(data) {
+			$("#view-level").html(data);
+		});
+	});
+	$("#btn-barobill-regist").click(function() {
+		$.post("http://enewsline.co.kr/module/newsix/admin/regist_corp.php", "site_no=1", function(data) {
+			if(data == '1') {
+				alert("바로빌에 회원사 정보가 저장되었습니다.");
+				location.reload();
+			}else if(data) {
+				alert(data);
+			}else {
+				alert("실패했습니다.");
+			}
+		});
+	});
+});
+//-->
+</script>
+<form name="site_form" id="site_form" action="" method="post">
+<input type="hidden" name="mode" value="modify">
+<input type="hidden" name="site_no" value="1">
+
+<section class="panel">
+	<header class="panel-heading">
+		<h2 class="panel-title">사이트 정보</h2>
+	</header>
+	<div class="panel-body">
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">사이트명 <span class="label label-danger">필수</span></label>
+			<div class="col-lg-5">
+				<input type="text" name="site_name" id="site_name" value="언론보도 e뉴스라인" class="form-control">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">적립금</label>
+			<div class="col-lg-5">
+				0원
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">마일리지</label>
+			<div class="col-lg-5">
+				0원
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">idX</label>
+			<div class="col-lg-5">
+				1
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">사이트 구분</label>
+			<div class="col-lg-5">
+				본사
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">사이트 레벨</label>
+			<div class="col-lg-5">
+				본사
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">기본 도메인</label>
+			<div class="col-lg-5">
+				en456789.enewsline.co.kr
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">연결 도메인</label>
+			<div class="col-lg-5">
+				enewsline.co.kr (등록신청중)
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-lg-6 col-lg-offset-2">
+				<div class="input-group mb-md">
+					<input type="text" name="site_url" id="site_url" value="" class="form-control">
+					<div class="input-group-btn" style="width:110px;">
+						<button tabindex="1" class="btn btn-primary btn-widget-click" id="" type="button">등록/변경신청</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6 col-lg-offset-2">
+				<div class="alert alert-info">
+					<div><span class="help-block">
+						<h5>네임서버</h5>
+						<p>ns1.kscloud.kr<br>
+						1.234.41.220<br>
+						ns2.kscloud.kr<br>
+						1.201.102.129</p>
+					</span></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="right mt-xs">
+		<input type="button" value="저장" class="btn btn-primary btn-save">
+	</div>
+</section>
+
+<section class="panel">
+	<header class="panel-heading">
+		<h2 class="panel-title">디자인 설정</h2>
+	</header>
+	<div class="panel-body">
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">상단로고 (PC)</label>
+			<div class="col-lg-3">
+				<div class="row">
+					<div class="col-xs-10">
+						<div class="input-group mb-md">
+							<input type="text" name="" id="" value="" placeholder="" class="form-control" readonly="">
+							<div class="input-group-btn">
+								<button tabindex="-1" class="btn btn-primary btn-widget-click" id="" type="button">Select</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-2 m-none p-none">
+						<button tabindex="-1" class="btn btn-primary tax-form btn-md btn-block" id="" type="button">등록</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-7">
+				<span>http://enewsline.co.kr/data/media/image/001/201610/20161005164811292.png</span>
+				<button type="button" class="btn btn-default ml-sm" onclick="window.open('http://enewsline.co.kr/data/media/image/001/201610/20161005164811292.png')"> <i class="fa fa-refresh"></i> 확인</button>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">하단로고 (PC)</label>
+			<div class="col-lg-3">
+				<div class="row">
+					<div class="col-xs-10">
+						<div class="input-group mb-md">
+							<input type="text" name="" id="" value="" placeholder="" class="form-control" readonly="">
+							<div class="input-group-btn">
+								<button tabindex="-1" class="btn btn-primary btn-widget-click" id="" type="button">Select</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-2 m-none p-none">
+						<button tabindex="-1" class="btn btn-primary tax-form btn-md btn-block" id="" type="button">등록</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-7">
+				<span>http://enewsline.co.kr/data/media/image/001/201610/20161005164811211.png</span>
+				<button type="button" class="btn btn-default ml-sm" onclick="window.open('http://enewsline.co.kr/data/media/image/001/201610/20161005164811211.png')"> <i class="fa fa-refresh"></i> 확인</button>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">상단로고 (모바일)</label>
+			<div class="col-lg-3">
+				<div class="row">
+					<div class="col-xs-10">
+						<div class="input-group mb-md">
+							<input type="text" name="" id="" value="" placeholder="" class="form-control" readonly="">
+							<div class="input-group-btn">
+								<button tabindex="-1" class="btn btn-primary btn-widget-click" id="" type="button">Select</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-2 m-none p-none">
+						<button tabindex="-1" class="btn btn-primary tax-form btn-md btn-block" id="" type="button">등록</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-7">
+				<span></span>
+				<button type="button" class="btn btn-default ml-sm" onclick="window.open('')"> <i class="fa fa-refresh"></i> 확인</button>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">하단로고 (모바일)</label>
+			<div class="col-lg-3">
+				<div class="row">
+					<div class="col-xs-10">
+						<div class="input-group mb-md">
+							<input type="text" name="" id="" value="" placeholder="" class="form-control" readonly="">
+							<div class="input-group-btn">
+								<button tabindex="-1" class="btn btn-primary btn-widget-click" id="insert-image2-top_logo" type="button">Select</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-2 m-none p-none">
+						<button tabindex="-1" class="btn btn-primary tax-form btn-md btn-block" id="insert-image2-top_logo" type="button">등록</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-7">
+				<span></span>
+				<button type="button" class="btn btn-default ml-sm" onclick="window.open('')"> <i class="fa fa-refresh"></i> 확인</button>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">스킨</label>
+			<div class="col-lg-5">
+				<select name="skin_no" id="skin_no" class="form-control mb-md" required="">
+				<option value="">스킨 선택</option>
+					<option value="1" selected="selected">skin1 </option>
+					<option value="2">skin2 </option>
+					<option value="3">skin3 </option>
+					<option value="4">skin4 </option>
+					<option value="5">skin5 </option>
+					<option value="6">skin6 </option>
+					<option value="7">skin7 </option>
+					<option value="8">skin8 </option>
+					<option value="9">skin9 </option>
+					<option value="10">skin10 </option>
+					<option value="11">skin11 </option>
+				</select>
+			</div>
+		</div>
+		<!--
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">보도신청 노출타입</label>
+			<div class="col-lg-5">
+							<div class="radio-custom float-left mr-lg ">
+					<input type="radio" name="item_open_type" class="item_open_type" value="0" checked>
+					<label for="radioExample1">리스트 형식</label>
+				</div>
+							<div class="radio-custom float-left "">
+					<input type="radio" name="item_open_type" class="item_open_type" value="1" >
+					<label for="radioExample2">앨범 형식</label>
+				</div>
+			</div>
+		</div>
+		-->
+	</div>
+	<div class="right mt-xs">
+		<input type="button" value="저장" class="btn btn-primary btn-save">
+	</div>
+</section>
+
+<section class="panel">
+	<header class="panel-heading">
+		<h2 class="panel-title">회사 정보</h2>
+	</header>
+	<div class="panel-body">
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">회사명(법인명) <span class="label label-danger">필수</span></label>
+			<div class="col-lg-5">
+				<input type="text" name="copy_name" id="copy_name" value="프레스 센터" class="form-control" required="">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">대표자 성명 <span class="label label-danger">필수</span></label>
+			<div class="col-lg-5">
+				<input type="text" name="copy_master" id="copy_master" value="주영석" class="form-control" required="">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">사업자번호 <span class="label label-danger">필수</span></label>
+			<div class="col-lg-5">
+				<div class="row">
+					<div class="col-sm-4">
+						<input type="text" name="copy_num1" id="copy_num1" value="220" class="form-control" required="">
+					</div>
+					<div class="visible-xs mb-md"></div>
+					<div class="col-sm-3">
+						<input type="text" name="copy_num2" id="copy_num2" value="88" class="form-control" required="">
+					</div>
+					<div class="visible-xs mb-md"></div>
+					<div class="col-sm-5">
+						<input type="text" name="copy_num3" id="copy_num3" value="82375" class="form-control" required="">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="alert">
+			<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">사업자등록증 <span class="label label-danger">필수</span></label>
+			<div class="col-lg-3">
+				<div class="row">
+					<div class="col-xs-10">
+						<div class="input-group">
+							<input type="text" name="" id="" value="" placeholder="" class="form-control" readonly="">
+							<div class="input-group-btn">
+								<button tabindex="-1" class="btn btn-primary btn-widget-click" id="" type="button">Select</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-2 m-none p-none">
+						<button tabindex="-1" class="btn btn-primary tax-form btn-md btn-block" id="" type="button">등록</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-7">
+				<span>사업자등록증.jpg</span>
+				<button type="button" class="btn btn-default ml-sm" onclick="window.open('img/projects/project.jpg')"> <i class="fa fa-refresh"></i> 확인</button>
+			</div>
+		</div>
+		</div>
+
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">통신판매신고 번호 <span class="label label-danger">필수</span></label>
+			<div class="col-lg-5">
+				<input type="text" name="copy_snum" id="copy_snum" value="" class="form-control" required="">
+			</div>
+		</div>
+		<div class="alert">
+			<div class="form-group">
+				<label class="col-lg-2 control-label" for="inputDefault">통신판매신고 등록증 <span class="label label-danger">필수</span></label>
+				<div class="col-lg-3">
+					<div class="row">
+						<div class="col-xs-10">
+							<div class="input-group">
+								<input type="text" name="" id="" value="" placeholder="" class="form-control" readonly="">
+								<div class="input-group-btn">
+									<button tabindex="-1" class="btn btn-primary btn-widget-click" id="" type="button">Select</button>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2 m-none p-none">
+							<button tabindex="-1" class="btn btn-primary tax-form btn-md btn-block" id="" type="button">등록</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-7">
+					<span>통신판매신고등록증.jpg</span>
+					<button type="button" class="btn btn-default ml-sm" onclick="window.open('img/projects/project.jpg')"> <i class="fa fa-refresh"></i> 확인</button>
+				</div>
+			</div>
+		</div>
+		
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">업종 <span class="label label-danger">필수</span></label>
+			<div class="col-lg-5">
+				<input type="text" name="copy_class" id="copy_class" value="" class="form-control" required="">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">업태 <span class="label label-danger">필수</span></label>
+			<div class="col-lg-5">
+				<input type="text" name="copy_type" id="copy_type" value="" class="form-control" required="">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">회사 소재지 <span class="label label-danger">필수</span></label>
+			<div class="col-lg-5">
+				<div class="form-inline">
+					<input type="text" name="copy_postcode" id="copy_postcode" value="06125" placeholder="우편번호" class="form-control tax-form" required="">
+					<input type="button" value="우편번호검색" class="btn btn-primary tax-form btn-sm" onclick="postcode_execDaumPostcode()">
+				</div>
+				<div id="wrap" style="display:none;border:1px solid;width:500px;height:300px;margin:5px 0;position:relative">
+					<img src="//i1.daumcdn.net/localimg/localimages/07/postcode/320/close.png" id="btnFoldWrap" style="cursor:pointer;position:absolute;right:0px;top:-1px;z-index:1" onclick="foldDaumPostcode()" alt="접기 버튼">
+				</div>
+
+				<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script><script charset="UTF-8" type="text/javascript" src="http://s1.daumcdn.net/svc/attach/U03/cssjs/postcode/1478062179046/161102.js"></script>
+				<script>
+				    // 우편번호 찾기 찾기 화면을 넣을 element
+				    var element_wrap = document.getElementById('wrap');
+
+				    function foldDaumPostcode() {
+				        // iframe을 넣은 element를 안보이게 한다.
+				        element_wrap.style.display = 'none';
+				    }
+
+				    function postcode_execDaumPostcode() {
+				        // 현재 scroll 위치를 저장해놓는다.
+				        var currentScroll = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
+				        new daum.Postcode({
+				            oncomplete: function(data) {
+				                // 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+
+				                // 각 주소의 노출 규칙에 따라 주소를 조합한다.
+				                // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+				                var fullAddr = data.address; // 최종 주소 변수
+				                var extraAddr = ''; // 조합형 주소 변수
+
+				                // 기본 주소가 도로명 타입일때 조합한다.
+				                if(data.addressType === 'R'){
+				                    //법정동명이 있을 경우 추가한다.
+				                    if(data.bname !== ''){
+				                        extraAddr += data.bname;
+				                    }
+				                    // 건물명이 있을 경우 추가한다.
+				                    if(data.buildingName !== ''){
+				                        extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+				                    }
+				                    // 조합형주소의 유무에 따라 양쪽에 괄호를 추가하여 최종 주소를 만든다.
+				                    fullAddr += (extraAddr !== '' ? ' ('+ extraAddr +')' : '');
+				                }
+
+				                // 우편번호와 주소 정보를 해당 필드에 넣는다.
+				                document.getElementById('copy_postcode').value = data.zonecode; //5자리 새우편번호 사용
+				                document.getElementById('copy_address1').value = fullAddr;
+
+				                // iframe을 넣은 element를 안보이게 한다.
+				                // (autoClose:false 기능을 이용한다면, 아래 코드를 제거해야 화면에서 사라지지 않는다.)
+				                element_wrap.style.display = 'none';
+
+				                // 우편번호 찾기 화면이 보이기 이전으로 scroll 위치를 되돌린다.
+				                document.body.scrollTop = currentScroll;
+				            },
+				            // 우편번호 찾기 화면 크기가 조정되었을때 실행할 코드를 작성하는 부분. iframe을 넣은 element의 높이값을 조정한다.
+				            onresize : function(size) {
+				                element_wrap.style.height = size.height+'px';
+				            },
+				            width : '100%',
+				            height : '100%'
+				        }).embed(element_wrap);
+
+				        // iframe을 넣은 element를 보이게 한다.
+				        element_wrap.style.display = 'block';
+				    }
+				</script>
+					<div>
+						<input type="text" name="copy_address1" id="copy_address1" value="서울 강남구 봉은사로18길 4 (역삼동)" placeholder="기본 주소" class="form-control mt-xs" required="">
+						<input type="text" name="copy_address2" id="copy_address2" value="영우빌딩 5층" placeholder="나머지 주소" class="form-control mt-xs" required="">
+					</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">대표 이메일 <span class="label label-danger">필수</span></label>
+			<div class="col-lg-5">
+				<input type="text" name="copy_email" id="copy_email" value="" class="form-control" required="">
+			</div>
+			<div class="col-lg-5">
+				<span>세금계산서가 발행되는 대표 메일 입니다.</span>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">대표 전화 <span class="label label-danger">필수</span></label>
+			<div class="col-lg-5">
+				<input type="text" name="copy_tel" id="copy_tel" value="" class="form-control" required="">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">계산서 담당자 <span class="label label-danger">필수</span></label>
+			<div class="col-lg-5">
+				<input type="text" name="copy_manager" id="copy_manager" value="" class="form-control" required="">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">계산서 담당자 연락처</label>
+			<div class="col-lg-5">
+				<input type="text" name="copy_mobile" id="copy_mobile" value="" class="form-control" required="">
+			</div>
+		</div>
+	</div>
+
+	<div class="panel-body mt-xs">
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">은행명 <span class="label label-danger">필수</span></label>
+			<div class="col-lg-5">
+				<input type="text" name="bank_name" id="bank_name" value="" class="form-control">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">계좌 <span class="label label-danger">필수</span></label>
+			<div class="col-lg-5">
+				<input type="text" name="account" id="account" value="" class="form-control">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">예금주 <span class="label label-danger">필수</span></label>
+			<div class="col-lg-5">
+				<input type="text" name="bank_iname" id="bank_iname" value="" class="form-control">
+			</div>
+		</div>
+		<div class="alert">
+			<div class="form-group mb-none">
+				<label class="col-lg-2 control-label" for="inputDefault">통장사본 <span class="label label-danger">필수</span></label>
+				<div class="col-lg-3">
+					<div class="row">
+						<div class="col-xs-10">
+							<div class="input-group">
+								<input type="text" name="" id="" value="" placeholder="" class="form-control" readonly="">
+								<div class="input-group-btn">
+									<button tabindex="-1" class="btn btn-primary btn-widget-click" id="" type="button">Select</button>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2 m-none p-none">
+							<button tabindex="-1" class="btn btn-primary tax-form btn-md btn-block" id="" type="button">등록</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-7">
+					<span>통장사본.jpg</span>
+					<button type="button" class="btn btn-default ml-sm" onclick="window.open('img/projects/project.jpg')"> <i class="fa fa-refresh"></i> 확인</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="panel-body mt-xs">
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">개인정보 책임자 <span class="label label-danger">필수</span></label>
+			<div class="col-lg-5">
+				<input type="text" name="copy_policyman" id="copy_policyman" value="" class="form-control" required="">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">개인정보 책임자 연락처</label>
+			<div class="col-lg-5">
+				<input type="text" name="" id="" value="" class="form-control" required="">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">개인정보 책임자 이메일</label>
+			<div class="col-lg-5">
+				<input type="text" name="" id="" value="" class="form-control" required="">
+			</div>
+		</div>
+	</div>
+
+	<div class="panel-body mt-xs">
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">바로빌 ID</label>
+			<div class="col-lg-5">
+				<input type="text" name="barobill_id" id="barobill_id" value="" class="form-control">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">바로빌 PW</label>
+			<div class="col-lg-5">
+				<input type="text" name="barobill_pw" id="barobill_pw" value="" class="form-control">
+			</div>
+		</div>
+	</div>
+	<div class="right mt-xs">
+		<input type="button" value="저장" class="btn btn-primary btn-save">
+	</div>
+	<!-- 매니저 -->
+	<h6>매니저</h6>
+	<div class="mt-sm">
+		<button type="button" class="btn btn-primary" id="btn-barobill-regist" data-toggle="modal" data-target="#바로빌등록신청">바로빌 등록신청</button>
+		<a href="http://testbed.barobill.co.kr/interop/?TK=sPqyF7eIE4jirky2TiasOvOKnSYNE9N%2bBguANcxLcKsLT8TlCvavdyiGi8GqJg%2b%2foQW0WGkAg8GVMzipMTb4rRdf1PvHQfmJHzzZufEdxz9M99mSl8ARR9wm4rkpLHyZ4TUjIytdzM9Rw3yt6KZysXJi9JUfggR9cs8vvk1bSHEg%2fCR3cD5lK8jh199WR8xa&amp;TL=CERT&amp;DTY=1" target="_blank" class="btn btn-primary">공인인증서 등록(바로빌 회원사 등록을 먼저 진행해 주세요.)</a>
+	</div>
+
+
+	<!-- 관리자 -->
+	<h6>관리자</h6>
+	<div class="mt-sm">
+		<input type="button" value="바로빌 등록신청" id="btn-barobill-regist" class="btn btn-dark">
+		<input type="button" value="바로빌 회원사 등록" id="btn-barobill-regist" class="btn btn-primary">
+		<a href="http://testbed.barobill.co.kr/interop/?TK=sPqyF7eIE4jirky2TiasOvOKnSYNE9N%2bBguANcxLcKsLT8TlCvavdyiGi8GqJg%2b%2foQW0WGkAg8GVMzipMTb4rRdf1PvHQfmJHzzZufEdxz9M99mSl8ARR9wm4rkpLHyZ4TUjIytdzM9Rw3yt6KZysXJi9JUfggR9cs8vvk1bSHEg%2fCR3cD5lK8jh199WR8xa&amp;TL=CERT&amp;DTY=1" target="_blank" class="btn btn-primary">공인인증서 등록(바로빌 회원사 등록을 먼저 진행해 주세요.)</a>
+	</div>
+
+	<div class="modal fade" id="바로빌등록신청" tabindex="-1" role="dialog" aria-labelledby="defaultModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					<h4 class="modal-title" id="defaultModalLabel">바로빌 등록신청</h4>
+				</div>
+				<div class="modal-body pt-xlg pb-xlg">
+					<p class="center">등록신청후에는 회사정보 수정이 불가합니다.<br>등록신청을 완료하시겠습니까?</p>
+				</div>
+				<div class="modal-footer center">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">등록신청</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</section>
+
+<section class="panel">
+	<header class="panel-heading">
+		<h2 class="panel-title">고객센터 정보</h2>
+	</header>
+	<div class="panel-body">
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">상담 전화번호 <span class="label label-danger">필수</span></label>
+			<div class="col-lg-5">
+				<input type="text" name="" id="" value="(070) 7734-0098" class="form-control" required="">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">상담 이메일 <span class="label label-danger">필수</span></label>
+			<div class="col-lg-5">
+				<input type="text" name="copy_email2" id="copy_email2" value="news@pcss.co.kr" class="form-control" required="">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">운영정보</label>
+			<div class="col-lg-5">
+				<textarea class="form-control" rows="3" id="textareaAutosize" data-plugin-textarea-autosize="" style="overflow: hidden; word-wrap: break-word; resize: none; height: 74px;">open : 09:30 ~ 18:30 | 점심시간 : 12:00 ~ 13:00 | 휴무 : 토,일,공휴일
+				</textarea>
+			</div>
+		</div>
+	</div>
+	<div class="right mt-xs">
+		<input type="button" value="저장" class="btn btn-primary btn-save">
+	</div>
+</section>
+
+<section class="panel">
+	<header class="panel-heading">
+		<h2 class="panel-title">이용약관 &amp; 개인정보취급방침</h2>
+	</header>
+	<div class="panel-body">
+		<div class="alert alert-info">
+			<div>회사명 : {company_name}, 개인정보보호 책임자명 : {policy_name}, 연락처 : {policy_tel} </div>
+		</div>
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">이용약관</label>
+			<div class="col-lg-10">
+				<textarea class="form-control" name="agree" id="agree" rows="7"></textarea>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">개인정보 처리방침</label>
+			<div class="col-lg-10">
+				<textarea class="form-control" name="policy" id="policy" rows="7"></textarea>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">개인정보 처리방침(비회원)</label>
+			<div class="col-lg-10">
+				<textarea class="form-control" name="policy2" id="policy2" rows="7"></textarea>
+			</div>
+		</div>
+	</div>
+	<div class="right mt-xs">
+		<input type="button" value="저장" class="btn btn-primary btn-save">
+	</div>
+</section>
+
+<section class="panel">
+	<header class="panel-heading">
+		<h2 class="panel-title">사이트 설정 (검색엔진 최적화 SEO)</h2>
+	</header>
+	<div class="panel-body">
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">Title</label>
+			<div class="col-lg-10">
+				<input type="text" name="site_title" id="site_title" value="언론보도 e뉴스라인" class="form-control">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">Meta Description</label>
+			<div class="col-lg-10">
+				<input type="text" name="description" id="description" value="기업PR기사,언론홍보,국내최저비용,네이버 다음 노출 ,언론보도 전문기업" class="form-control">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">Meta Keywords</label>
+			<div class="col-lg-10">
+				<input type="text" name="keywords" id="keywords" value="언론보도,언론보도 의뢰, 언론홍보마케팅, PR대행전문, 기사작성대행, 뉴스기사배포" class="form-control">
+			</div>
+		</div>
+		<!--
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">Og Type</label>
+			<div class="col-lg-10">
+				<input type="text" name="og_type" id="og_type" value="" class="form-control" id="inputDefault">
+			</div>
+		</div>
+		-->
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">Og Description</label>
+			<div class="col-lg-10">
+				<input type="text" name="og_description" id="og_description" value="기업PR기사,언론홍보,국내최저비용,네이버 다음 노출 ,언론보도 전문기업" class="form-control">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">Og Image</label>
+			<div class="col-lg-10">
+				<div class="input-group mb-md">
+					<input type="text" name="og_image" id="og_image" value="data/media/image/site/201609/20160901001324990.png" class="form-control" readonly="">
+					<div class="input-group-btn">
+						<button tabindex="-1" class="btn btn-primary btn-widget-click" id="insert-image2-og_image" type="button">Select</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">Favicons</label>
+			<div class="col-lg-10">
+				<input type="text" name="favicon" id="favicon" value="" class="form-control">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">Apple touch icon</label>
+			<div class="col-lg-10">
+				<input type="text" name="apple_touch_icon" id="apple_touch_icon" value="" class="form-control">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">Apple touch icon x72</label>
+			<div class="col-lg-10">
+				<input type="text" name="apple_touch_icon72" id="apple_touch_icon72" value="" class="form-control">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">Apple touch icon x114</label>
+			<div class="col-lg-10">
+				<input type="text" name="apple_touch_icon114" id="apple_touch_icon114" value="" class="form-control">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">Naver Verification</label>
+			<div class="col-lg-10">
+				<input type="text" name="naver_verification" id="naver_verification" value="11f7b203cd03a39034a3dc2a472416d5694ffe19" class="form-control">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">Google Verification</label>
+			<div class="col-lg-10">
+				<input type="text" name="google_verification" id="google_verification" value="" class="form-control">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">Robots.txt</label>
+			<div class="col-lg-10">
+				<textarea class="form-control" name="robots_memo" id="robots_memo" rows="7"></textarea>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-lg-2 control-label" for="inputDefault">Sitemap.xml</label>
+			<div class="col-lg-10">
+				<textarea class="form-control" name="sitemap_memo" id="sitemap_memo" rows="7"></textarea>
+			</div>
+		</div>
+
+	</div>
+</section>
+
+<div class="right">
+	<input type="button" value="저장" class="btn btn-primary btn-save">
+	<input type="button" value="뒤로가기" class="btn btn-default" onclick="history.go(-1);">
+</div>
+
+</form>
+		</section>
+	</div>
+
+<aside id="sidebar-right" class="sidebar-right">
+<div class="nano has-scrollbar">
+	<div class="nano-content" tabindex="0" style="right: -17px;">
+		<a href="#" class="mobile-close visible-xs">
+		Collapse <i class="fa fa-chevron-right"></i>
+		</a>
+
+		<div class="sidebar-right-wrapper">
+
+			<div class="sidebar-widget widget-calendar">
+				<h6>Upcoming Tasks</h6>
+				<div data-plugin-datepicker="" data-plugin-skin="dark"><div class="datepicker datepicker-inline datepicker-dark"><div class="datepicker-days" style="display: block;"><table class=" table-condensed"><thead><tr><th colspan="7" class="datepicker-title" style="display: none;"></th></tr><tr><th class="prev" style="visibility: visible;">«</th><th colspan="5" class="datepicker-switch">November 2016</th><th class="next" style="visibility: visible;">»</th></tr><tr><th class="dow">Su</th><th class="dow">Mo</th><th class="dow">Tu</th><th class="dow">We</th><th class="dow">Th</th><th class="dow">Fr</th><th class="dow">Sa</th></tr></thead><tbody><tr><td class="old day">30</td><td class="old day">31</td><td class="day">1</td><td class="day">2</td><td class="day">3</td><td class="day">4</td><td class="day">5</td></tr><tr><td class="day">6</td><td class="day">7</td><td class="day">8</td><td class="day">9</td><td class="day">10</td><td class="day">11</td><td class="day">12</td></tr><tr><td class="day">13</td><td class="day">14</td><td class="day">15</td><td class="day">16</td><td class="day">17</td><td class="day">18</td><td class="day">19</td></tr><tr><td class="day">20</td><td class="day">21</td><td class="day">22</td><td class="day">23</td><td class="day">24</td><td class="day">25</td><td class="day">26</td></tr><tr><td class="day">27</td><td class="day">28</td><td class="day">29</td><td class="day">30</td><td class="new day">1</td><td class="new day">2</td><td class="new day">3</td></tr><tr><td class="new day">4</td><td class="new day">5</td><td class="new day">6</td><td class="new day">7</td><td class="new day">8</td><td class="new day">9</td><td class="new day">10</td></tr></tbody><tfoot><tr><th colspan="7" class="today" style="display: none;">Today</th></tr><tr><th colspan="7" class="clear" style="display: none;">Clear</th></tr></tfoot></table></div><div class="datepicker-months" style="display: none;"><table class="table-condensed"><thead><tr><th colspan="7" class="datepicker-title" style="display: none;"></th></tr><tr><th class="prev" style="visibility: visible;">«</th><th colspan="5" class="datepicker-switch">2016</th><th class="next" style="visibility: visible;">»</th></tr></thead><tbody><tr><td colspan="7"><span class="month">Jan</span><span class="month">Feb</span><span class="month">Mar</span><span class="month">Apr</span><span class="month">May</span><span class="month">Jun</span><span class="month">Jul</span><span class="month">Aug</span><span class="month">Sep</span><span class="month">Oct</span><span class="month focused">Nov</span><span class="month">Dec</span></td></tr></tbody><tfoot><tr><th colspan="7" class="today" style="display: none;">Today</th></tr><tr><th colspan="7" class="clear" style="display: none;">Clear</th></tr></tfoot></table></div><div class="datepicker-years" style="display: none;"><table class="table-condensed"><thead><tr><th colspan="7" class="datepicker-title" style="display: none;"></th></tr><tr><th class="prev" style="visibility: visible;">«</th><th colspan="5" class="datepicker-switch">2010-2019</th><th class="next" style="visibility: visible;">»</th></tr></thead><tbody><tr><td colspan="7"><span class="year old">2009</span><span class="year">2010</span><span class="year">2011</span><span class="year">2012</span><span class="year">2013</span><span class="year">2014</span><span class="year">2015</span><span class="year focused">2016</span><span class="year">2017</span><span class="year">2018</span><span class="year">2019</span><span class="year new">2020</span></td></tr></tbody><tfoot><tr><th colspan="7" class="today" style="display: none;">Today</th></tr><tr><th colspan="7" class="clear" style="display: none;">Clear</th></tr></tfoot></table></div><div class="datepicker-decades" style="display: none;"><table class="table-condensed"><thead><tr><th colspan="7" class="datepicker-title" style="display: none;"></th></tr><tr><th class="prev" style="visibility: visible;">«</th><th colspan="5" class="datepicker-switch">2000-2090</th><th class="next" style="visibility: visible;">»</th></tr></thead><tbody><tr><td colspan="7"><span class="decade old">1990</span><span class="decade">2000</span><span class="decade">2010</span><span class="decade">2020</span><span class="decade">2030</span><span class="decade">2040</span><span class="decade">2050</span><span class="decade">2060</span><span class="decade">2070</span><span class="decade">2080</span><span class="decade">2090</span><span class="decade new">2100</span></td></tr></tbody><tfoot><tr><th colspan="7" class="today" style="display: none;">Today</th></tr><tr><th colspan="7" class="clear" style="display: none;">Clear</th></tr></tfoot></table></div><div class="datepicker-centuries" style="display: none;"><table class="table-condensed"><thead><tr><th colspan="7" class="datepicker-title" style="display: none;"></th></tr><tr><th class="prev" style="visibility: visible;">«</th><th colspan="5" class="datepicker-switch">2000-2900</th><th class="next" style="visibility: visible;">»</th></tr></thead><tbody><tr><td colspan="7"><span class="century old">1900</span><span class="century">2000</span><span class="century">2100</span><span class="century">2200</span><span class="century">2300</span><span class="century">2400</span><span class="century">2500</span><span class="century">2600</span><span class="century">2700</span><span class="century">2800</span><span class="century">2900</span><span class="century new">3000</span></td></tr></tbody><tfoot><tr><th colspan="7" class="today" style="display: none;">Today</th></tr><tr><th colspan="7" class="clear" style="display: none;">Clear</th></tr></tfoot></table></div></div></div>
+
+				<ul>
+					<li>
+					<time datetime="2014-04-19T00:00+00:00">04/19/2014</time>
+					<span>Company Meeting</span>
+					</li>
+				</ul>
+			</div>
+
+			<div class="sidebar-widget widget-friends">
+				<h6>Friends</h6>
+				<ul>
+					<li class="status-online">
+					<figure class="profile-picture">
+					<img src="http://enewsline.co.kr/madmin/assets/images/!sample-user.jpg" alt="Joseph Doe" class="img-circle">
+					</figure>
+					<div class="profile-info">
+						<span class="name">Joseph Doe Junior</span>
+						<span class="title">Hey, how are you?</span>
+					</div>
+					</li>
+					<li class="status-online">
+					<figure class="profile-picture">
+					<img src="http://enewsline.co.kr/madmin/assets/images/!sample-user.jpg" alt="Joseph Doe" class="img-circle">
+					</figure>
+					<div class="profile-info">
+						<span class="name">Joseph Doe Junior</span>
+						<span class="title">Hey, how are you?</span>
+					</div>
+					</li>
+					<li class="status-offline">
+					<figure class="profile-picture">
+					<img src="http://enewsline.co.kr/madmin/assets/images/!sample-user.jpg" alt="Joseph Doe" class="img-circle">
+					</figure>
+					<div class="profile-info">
+						<span class="name">Joseph Doe Junior</span>
+						<span class="title">Hey, how are you?</span>
+					</div>
+					</li>
+					<li class="status-offline">
+					<figure class="profile-picture">
+					<img src="http://enewsline.co.kr/madmin/assets/images/!sample-user.jpg" alt="Joseph Doe" class="img-circle">
+					</figure>
+					<div class="profile-info">
+						<span class="name">Joseph Doe Junior</span>
+						<span class="title">Hey, how are you?</span>
+					</div>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+	</div>
+<div class="nano-pane" style="display: block; opacity: 1; visibility: visible;"><div class="nano-slider" style="height: 369px; transform: translate(0px, 0px);"></div></div></div>
+</aside>
+</section>
+
+<!-- insert image/widget start -->
+<a class="modal-basic hidden" href="#modal-layer" id="btn-modal-open">insert</a>
+<div id="modal-layer" class="modal-block2 mfp-hide">
+	<section class="panel">
+	<header class="panel-heading">
+		<button type="button" class="close modal-dismiss"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+		<h2 class="panel-title">이미지 삽입</h2>
+	</header>
+	<div class="panel-body">
+		<div class="modal-wrapper pt-none" id="modal-content">
+		내용 불러오는곳
+		</div>
+	</div>
+	<footer class="panel-footer">
+	<div class="row">
+		<div class="col-lg-12 text-right">
+			<button class="btn btn-default modal-dismiss">닫기</button>
+		</div>
+	</div>
+	</footer>
+	</section>
+</div>
+<!-- insert image/widget end -->
+
+<!-- Vendor -->
+<script src="http://enewsline.co.kr/madmin/assets/vendor/jquery-browser-mobile/jquery.browser.mobile.js"></script>
+<script src="http://enewsline.co.kr/madmin/assets/vendor/bootstrap/js/bootstrap.js"></script>
+<script src="http://enewsline.co.kr/madmin/assets/vendor/nanoscroller/nanoscroller.js"></script>
+<script src="http://enewsline.co.kr/madmin/assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+<script src="http://enewsline.co.kr/madmin/assets/vendor/magnific-popup/jquery.magnific-popup.js"></script>
+<script src="http://enewsline.co.kr/madmin/assets/vendor/jquery-placeholder/jquery-placeholder.js"></script>
+
+<!-- Specific Page Vendor -->
+<script src="http://enewsline.co.kr/madmin/assets/vendor/jquery-ui/jquery-ui.js"></script>
+<script src="http://enewsline.co.kr/madmin/assets/vendor/jqueryui-touch-punch/jqueryui-touch-punch.js"></script>
+<script src="http://enewsline.co.kr/madmin/assets/vendor/jquery-appear/jquery-appear.js"></script>
+<script src="http://enewsline.co.kr/madmin/assets/vendor/select2/js/select2.js"></script>
+	
+<script src="http://enewsline.co.kr/madmin/assets/vendor/bootstrap-multiselect/bootstrap-multiselect.js"></script>
+<script src="http://enewsline.co.kr/madmin/assets/vendor/jquery-maskedinput/jquery.maskedinput.js"></script>
+
+<script src="http://enewsline.co.kr/madmin/assets/vendor/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+<script src="http://enewsline.co.kr/madmin/assets/vendor/bootstrap-timepicker/bootstrap-timepicker.js"></script>
+<script src="http://enewsline.co.kr/madmin/assets/vendor/fuelux/js/spinner.js"></script>
+<script src="http://enewsline.co.kr/madmin/assets/vendor/bootstrap-markdown/js/markdown.js"></script>
+<script src="http://enewsline.co.kr/madmin/assets/vendor/bootstrap-markdown/js/to-markdown.js"></script>
+<script src="http://enewsline.co.kr/madmin/assets/vendor/bootstrap-markdown/js/bootstrap-markdown.js"></script>
+
+
+<script src="http://enewsline.co.kr/madmin/assets/vendor/jquery.easy-pie-chart/jquery.easy-pie-chart.js"></script>
+<script src="http://enewsline.co.kr/madmin/assets/vendor/flot/jquery.flot.js"></script>
+<script src="http://enewsline.co.kr/madmin/assets/vendor/flot.tooltip/flot.tooltip.js"></script>
+<script src="http://enewsline.co.kr/madmin/assets/vendor/flot/jquery.flot.pie.js"></script>
+<script src="http://enewsline.co.kr/madmin/assets/vendor/flot/jquery.flot.categories.js"></script>
+<script src="http://enewsline.co.kr/madmin/assets/vendor/flot/jquery.flot.resize.js"></script>
+<script src="http://enewsline.co.kr/madmin/assets/vendor/jquery-sparkline/jquery-sparkline.js"></script>
+<script src="http://enewsline.co.kr/madmin/assets/vendor/raphael/raphael.js"></script>
+<script src="http://enewsline.co.kr/madmin/assets/vendor/morris.js/morris.js"></script>
+<script src="http://enewsline.co.kr/madmin/assets/vendor/gauge/gauge.js"></script>
+<script src="http://enewsline.co.kr/madmin/assets/vendor/snap.svg/snap.svg.js"></script>
+<script src="http://enewsline.co.kr/madmin/assets/vendor/liquid-meter/liquid.meter.js"></script>
+<script src="http://enewsline.co.kr/madmin/assets/vendor/jqvmap/jquery.vmap.js"></script>
+<script src="http://enewsline.co.kr/madmin/assets/vendor/jqvmap/data/jquery.vmap.sampledata.js"></script>
+<script src="http://enewsline.co.kr/madmin/assets/vendor/jqvmap/maps/jquery.vmap.world.js"></script>
+<script src="http://enewsline.co.kr/madmin/assets/vendor/jqvmap/maps/continents/jquery.vmap.africa.js"></script>
+<script src="http://enewsline.co.kr/madmin/assets/vendor/jqvmap/maps/continents/jquery.vmap.asia.js"></script>
+<script src="http://enewsline.co.kr/madmin/assets/vendor/jqvmap/maps/continents/jquery.vmap.australia.js"></script>
+<script src="http://enewsline.co.kr/madmin/assets/vendor/jqvmap/maps/continents/jquery.vmap.europe.js"></script>
+<script src="http://enewsline.co.kr/madmin/assets/vendor/jqvmap/maps/continents/jquery.vmap.north-america.js"></script>
+<script src="http://enewsline.co.kr/madmin/assets/vendor/jqvmap/maps/continents/jquery.vmap.south-america.js"></script>
+<script src="http://enewsline.co.kr/madmin/assets/vendor/jstree/jstree.js"></script>
+<script src="http://enewsline.co.kr/madmin/assets/vendor/ios7-switch/ios7-switch.js"></script>
+<script src="http://enewsline.co.kr/madmin/assets/vendor/bootstrap-fileupload/bootstrap-fileupload.min.js"></script>
+<script src="http://enewsline.co.kr/madmin/assets/vendor/dropzone/dropzone.js"></script>
+<script src="http://enewsline.co.kr/madmin/assets/vendor/codemirror/lib/codemirror.js"></script>
+<script src="http://enewsline.co.kr/madmin/assets/vendor/codemirror/addon/selection/active-line.js"></script>
+<script src="http://enewsline.co.kr/madmin/assets/vendor/codemirror/addon/edit/matchbrackets.js"></script>
+<script src="http://enewsline.co.kr/madmin/assets/vendor/codemirror/mode/javascript/javascript.js"></script>
+<script src="http://enewsline.co.kr/madmin/assets/vendor/codemirror/mode/xml/xml.js"></script>
+<script src="http://enewsline.co.kr/madmin/assets/vendor/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+<script src="http://enewsline.co.kr/madmin/assets/vendor/codemirror/mode/css/css.js"></script>
+<script src="http://enewsline.co.kr/madmin/assets/vendor/pnotify/pnotify.custom.js"></script>
+<script src="http://enewsline.co.kr/madmin/assets/vendor/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
+<script type="text/javascript" src="http://enewsline.co.kr/osrc/uploadify/jquery.uploadify.min.js"></script>
+
+<!-- Theme Base, Components and Settings -->
+<script src="http://enewsline.co.kr/madmin/assets/javascripts/theme.js"></script>
+
+<!-- Theme Custom -->
+<script src="http://enewsline.co.kr/madmin/assets/javascripts/theme.custom.js"></script>
+
+<!-- Theme Initialization Files -->
+<script src="http://enewsline.co.kr/madmin/assets/javascripts/theme.init.js"></script><a class="scroll-to-top hidden-mobile" href="#"><i class="fa fa-chevron-up"></i></a>
+
+<!-- Examples -->
+<script src="http://enewsline.co.kr/madmin/assets/javascripts/dashboard/examples.dashboard.js"></script>
+<script src="http://enewsline.co.kr/madmin/assets/javascripts/ui-elements/examples.modals.js"></script>
+<script src="http://enewsline.co.kr/madmin/assets/javascripts/ui-elements/examples.treeview.js"></script>
+<script src="http://enewsline.co.kr/madmin/assets/javascripts/ui-elements/examples.lightbox.js"></script>
+
+
+<canvas id="__gesture_canvas__" width="0" height="0" style="z-index: 100000000; position: fixed; background: transparent !important; top: 0px; left: 0px;"></canvas><span id="__gesture_preview__" style="z-index: 100000001; position: absolute; background: rgba(255, 255, 225, 0.85098); margin: 0px; border: 1px solid black; white-space: nowrap; display: none;"></span></body></html>

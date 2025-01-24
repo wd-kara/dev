@@ -1,0 +1,188 @@
+/* sub page style */
+
+.sub {
+    padding-bottom:100px;
+}
+.sub .container {
+  position:relative;
+}
+.sub .contents {
+  padding-bottom:80px;
+}
+.sub .contents > .contents {
+  padding-top:30px;
+  padding-bottom:0;
+}
+.sub .contents:first-child {
+  padding-top:0;
+}
+.sub img {
+  max-width:100%;
+}
+
+
+.sub .sub01 {}
+.sub .sub02 {}
+.sub .sub03 {}
+.sub .sub04 {}
+.sub .sub05 {}
+.sub .sub06 {}
+
+/* headings */
+h1 {
+
+}
+h2 {
+    font-size: 2.2em;
+    font-weight: 800;
+    line-height: 1.2em;
+    margin: 0 0 32px 0;
+}
+h3 {}
+h4 {}
+h5 {}
+h6 {}
+
+/*contents style*/
+
+/* list-step basic */
+.list-step.normal > li > .box > .detail > ul > li {
+  padding:0;
+  margin:0;
+}
+.list-step.normal > li .detail > ul > li::before
+ {
+  display:none;
+  padding:0;
+  margin:0;
+}
+
+
+.list-step.style1 > li .detail > ul.normal > li {
+  padding:0;
+  margin:0;
+}
+.list-step.style1 > li .detail > ul.normal > li::before {
+  display:none;
+  padding:0;
+  margin:0;
+}
+
+/* list-step style1 */
+
+.list-step.style1 {
+  padding:0;
+  margin:0;
+  list-style-type: decimal;
+}
+.list-step.style1 > li {
+}
+.list-step.style1 > li .box {
+  width:180px;
+  min-height:220px;
+  padding:15px;
+  margin:15px auto;
+  background: url(http://enewsline.co.kr/data/media/image/section/201610/20161026163511429.png);
+}
+.list-step.style1 > li .step {
+  display:block;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: 800;
+  margin:0 0 22px;
+  color:#fff;
+}
+.list-step.style1 > li .title {
+  display:block;
+  text-align: center;
+  font-size: 1.2em;
+}
+.list-step.style1 > li .line {
+  display:block;
+  margin:9px auto;
+  width:30px;
+  height:2px;
+  background-color: #ddd;
+}
+.list-step.style1 > li .detail > ul {}
+.list-step.style1 > li .detail > ul > li {
+  margin-left:10px;
+}
+.list-step.style1 > li .detail > ul > li:before {
+  content:"·";
+  padding-right:3px;
+  margin-left:-10px;
+}
+.list-step.style1 > li .detail > ul > li > ul > li {
+  margin-left:10px;
+}
+.list-step.style1 > li .detail > ul > li > ul > li:before {
+  content:"→";
+  padding-right:3px;
+  margin-left:-10px;
+}
+.list-step.style1 > li .detail {
+  color:#555;
+}
+
+@media (max-width:767px) {
+  .list-step.style1 > li {
+    padding-bottom:40px;
+  }
+  .list-step.style1 > li:after {
+    position:absolute;
+    bottom:0;
+    left:50%;
+    margin-left:-20px;
+    content:"∨";
+    width:40px;
+    height:40px;
+    line-height: 40px;
+    color:#fff;
+    background-color: #ddd;
+    border-radius: 100%;
+    text-align: center;
+  }
+  .list-step.style1 > li:last-child:after {
+    display:none;
+  }
+}
+@media (min-width:768px) {
+  .list-step.style1 > li:after {
+    display:block;
+    width:35px;
+    height:10px;
+    position:absolute;
+    top:120px;
+    right:-17px;
+    content:"";
+    background:url(http://enewsline.co.kr/data/media/image/section/201610/20161026163511554.png);
+    background-size:35px 10px;
+  }
+  .list-step.style1 > li:last-child:after {
+    display:none;
+  }
+}
+
+
+.contents.sub-interview-advantage {
+    background: url(http://enewsline.co.kr/data/media/image/sub05/201609/20160920100400268.png) no-repeat 50% 0;
+    padding:50px;
+}
+
+/*마이페이지*/
+.myAcount {}
+
+/*고객센터*/
+.csCenter {}
+
+/*보도신청*/
+.order {}
+
+
+
+@media (min-width:1199px) {
+  .col-lg-c5 {
+    width:20%;
+  }
+}

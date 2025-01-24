@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<!-- Basic -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">	
+
+		<title>sub000 - 본사 - main</title>	
+
+		<meta name="keywords" content="HTML5 Template" />
+		<meta name="description" content="Porto - Responsive HTML5 Template">
+		<meta name="author" content="okler.net">
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+		<!-- Mobile Metas -->
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<!-- Web Fonts  -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light" rel="stylesheet" type="text/css">
+
+		<!-- Vendor CSS -->
+		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.min.css">
+		<link rel="stylesheet" href="vendor/owl.carousel/assets/owl.carousel.min.css">
+		<link rel="stylesheet" href="vendor/owl.carousel/assets/owl.theme.default.min.css">
+		<link rel="stylesheet" href="vendor/magnific-popup/magnific-popup.min.css">
+
+		<!-- Theme CSS -->
+		<link rel="stylesheet" href="css/theme.css">
+		<link rel="stylesheet" href="css/theme-elements.css">
+		<link rel="stylesheet" href="css/theme-blog.css">
+		<link rel="stylesheet" href="css/theme-shop.css">
+		<link rel="stylesheet" href="css/theme-animate.css">
+
+		<!-- Current Page CSS -->
+		<link rel="stylesheet" href="vendor/rs-plugin/css/settings.css">
+		<link rel="stylesheet" href="vendor/rs-plugin/css/layers.css">
+		<link rel="stylesheet" href="vendor/rs-plugin/css/navigation.css">
+		<link rel="stylesheet" href="vendor/circle-flip-slideshow/css/component.css">
+
+		<!-- Skin CSS -->
+		<link rel="stylesheet" href="css/skins/default.css">
+
+		<!-- Theme Custom CSS -->
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/style-btn.css">
+		<link rel="stylesheet" href="css/style-order-form.css">
+		<link rel="stylesheet" href="css/style-main.css">
+		<link rel="stylesheet" href="css/style-color.css">
+
+		<!-- Head Libs -->
+		<script src="vendor/modernizr/modernizr.min.js"></script>
+
+	</head>
+	<body>
+	<div class="modal fade" id="myAccountModal" tabindex="-1" role="dialog" aria-labelledby="myAccountModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title center" id="myAccountModalLabel">My Account</h4>
+				</div>
+				<div class="modal-body">
+					<nav>
+						<ul class="nav-myaccount-modal">
+							<? if(!$member['no']) { ?>
+							<li class="">
+								<a href="<?=_root_url?>login-form">로그인</a>
+							</li>
+							<li class="">
+								<a href="<?=_root_url?>join-form1">회원가입</a>
+							</li>
+							<? }else { ?>
+							<li class=""><a href="/마이페이지-보도신청목록" title="login">보도신청관리</a></li>
+							<li class=""><a href="/마이페이지-포인트기록" title="login">포인트관리</a></li>
+							<li class=""><a href="/마이페이지-회원정보수정" title="join">회원정보수정</a></li>
+							<li class=""><a href="/마이페이지-보도신청목록" title="join">마이페이지</a></li>
+							<li class=""><a href="<?=_root_url?>main/logout_check.php">로그아웃</a></li>
+							<? } ?>
+						</ul>
+					</nav>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="close font-size-lg" data-dismiss="modal" aria-hidden="true">&times;</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="body">
+		<header id="header" class="header-narrow" data-plugin-options='{"stickyEnabled": true, "stickyEnableOnBoxed": true, "stickyEnableOnMobile": true, "stickyStartAt": 37, "stickySetTop": "-37px", "stickyChangeLogo": false}'>
+			<div class="header-body">
+				<div class="header-top header-top-dark hidden-xs hidden-sm p-none">
+					<div class="container">
+							<p class="text-color-light">
+								<span class="ml-xs hidden-xs">언론홍보의 시작 <?=$setup['site_name']?></span>
+							</p>
+							<nav class="header-nav-top pull-right">
+								<ul class="nav nav-pills">
+									<? if(!$member['no']) { ?>
+									<li class="font-size-sm">
+										<a href="<?=_root_url?>/newsix/order3">보도신청</a>
+									</li>
+									<li class="font-size-sm">
+										<a href="<?=_root_url?>login-form">로그인</a>
+									</li>
+									<li class="font-size-sm">
+										<a href="<?=_root_url?>join-form1">회원가입</a>
+									</li>
+									<? }else { ?>
+									<li class="hidden-md hidden-lg"><a href="<?=_root_url?>마이페이지-보도신청목록" title="login">보도신청관리</a></li>
+									<li class="hidden-md hidden-lg"><a href="<?=_root_url?>마이페이지-포인트기록" title="login">포인트관리</a></li>
+									<li class="hidden-md hidden-lg"><a href="<?=_root_url?>마이페이지-회원정보수정" title="join">회원정보수정</a></li>
+									<li class="hidden-xs"><a href="<?=_root_url?>마이페이지-보도신청목록" title="join">마이페이지</a></li>
+									<li class=""><a href="<?=_root_url?>main/logout_check.php">로그아웃</a></li>
+									<? } ?>
+									<li><a href="<?=_root_url?>고객센터">고객센터</a></li>
+								</ul>
+							</nav>
+					</div>
+				</div>
+				<div class="header-container container">
+					<div class="header-row">
+						<div class="header-column">
+							<div class="header-logo">
+								<a href="<?=_root_url?>"><img alt="<?=$setup['site_name']?>" src="<?=$setup['top_logo']?>"></a>
+							</div>
+						</div>
+						<div class="header-column">
+							<div class="header-row">
+								<div class="header-nav header-nav-stripe">
+									<button class="btn header-btn-collapse-nav" data-toggle="collapse" data-target=".nav-main">
+										<i class="fa fa-bars"></i>
+									</button>
+									<button class="btn header-btn-collapse-nav" data-toggle="modal" data-target="#myAccountModal">
+										<i class="fa fa-user"></i>
+									</button>
+									<a class="btn header-btn-collapse-nav media-order" href="/newsix/order_form">
+										<i class="fa fa-bell"></i> 보도신청
+									</a>
+									<div class="header-nav-main nav-main header-nav-main-square header-nav-main-effect-1 header-nav-main-sub-effect-1 collapse">
+										
+											<!-- <ul class="nav nav-pills" id="mainNav">
+												<?
+												$res = querys("select * from $category_table where category_set_no = '1' and parent_no='0' and state = '0' order by rank desc, no asc");
+												while($row = mysql_fetch_assoc($res)) {
+													$nav_name = stripslashes($row['name']);
+													$res2 = querys("select * from $category_table where parent_no = '$row[no]' and state = '0' order by rank desc, no asc");
+													$sub_cnt2 = mysql_num_rows($res2);
+												?>
+												<li class="dropdown">
+													<a href="<?=$row['url']?>" target="<?=$row['target']?>" class="<?=($sub_cnt2)?"dropdown-toggle":""?>">
+														<?=$nav_name?>
+													</a>
+													<?
+													if($sub_cnt2) {
+													?>
+													<ul class="dropdown-menu">
+														<?
+														while($row2 = mysql_fetch_assoc($res2)) {
+															$nav_name = stripslashes($row2['name']);
+															$res3 = querys("select * from $category_table where parent_no = '$row2[no]' and state = '0' order by rank desc, no asc");
+															$sub_cnt3 = mysql_num_rows($res3);
+														?>
+														<li class="<?=($sub_cnt3)?"dropdown-submenu":""?>">
+															<a href="<?=$row2['url']?>" target="<?=$row2['target']?>">
+																<?=$nav_name?>
+															</a>
+															<?
+															if($sub_cnt3) {
+															?>
+															<ul class="dropdown-menu">
+																<?
+																while($row3 = mysql_fetch_assoc($res3)) {
+																	$nav_name = stripslashes($row3['name']);
+																?>
+																<li>
+																	<a href="<?=$row3['url']?>" target="<?=$row3['target']?>">
+																		<?=$nav_name?>
+																	</a>
+
+																</li>
+																<?
+																}
+																?>
+															</ul>
+															<?
+															}
+															?>
+														</li>
+														<?
+														}
+														?>
+													</ul>
+													<?
+													}
+													?>
+												</li>
+												<?
+												}
+												?>
+											</ul> -->
+										</nav>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+			<div role="main" class="main">
+
+				<!-- 리스트 - 3단 언론상품안내 -->
+				<section class="list-prd" id="" data-appear-animation="fadeInUp">
+					<div class="container" >
+						<div class="row">
+							<div class="col-md-4">
+								<div class="list">
+									<h3>
+										<i class="fa fa-krw" aria-hidden="true"></i><strong>언론홍보 최저가</strong> 노출 가격 안내
+									</h3>
+									<ul>
+										<li><span class="product"><b>포털사이트</b> 다음/네이트 최저가</span><span class="price">20,000원</span></li>
+										<li><span class="product"><b>포털사이트</b> 네이버/다음/네이트 최저가</span><span class="price">55,000원</span></li>
+										<li><span class="product"><b>텍스트 언론홍보 A타입</b> 최저가</span><span class="price">55,000원</span></li>
+										<li><span class="product"><b>텍스트 언론홍보 B타입</b> 최저가</span><span class="price">80,000원</span></li>
+										<li><span class="product"><b>인터뷰 언론홍보 A타입</b> 최저가</span><span class="price">180,000원</span></li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="list">
+									<h3>
+										<i class="glyphicon glyphicon-text-width" aria-hidden="true"></i><strong>텍스트 / 인터뷰 / 취재</strong> 언론홍보 안내
+									</h3>
+									<ul>
+										<li><span class="product"><b>텍스트 언론홍보 A타입</b></span><span class="price">20,000원 ~</span></li>
+										<li><span class="product"><b>텍스트 언론홍보 B타입</b></span><span class="price">80,000원 ~</span></li>
+										<li><span class="product"><b>인터뷰 언론홍보 A타입</b></span><span class="price">180,000원 ~</span></li>
+										<li><span class="product"><b>인터뷰 언론홍보 B타입</b></span><span class="price">상담후 책정</span></li>
+										<li><span class="product"><b>방문 취재, 인터뷰 대행</b></span><span class="price">상담후 책정</span></li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="list">
+									<h3>
+										<i class="glyphicon glyphicon-text-width" aria-hidden="true"></i><strong>뉴스라인 언론홍보</strong> 프로그램 안내
+									</h3>
+									<ul>
+										<li><span class="product"><b>맛방먹방쿡방</b> 텍스트A타입</span><span class="price">20,000원 ~</span></li>
+										<li><span class="product"><b>맛방먹방쿡방</b> 인터뷰A타입</span><span class="price">180,000원 ~</span></li>
+										<li><span class="product"><b>맛방먹방쿡방</b> 인터뷰B타입</span><span class="price">상담후 책정</span></li>
+										<li><span class="product"><b>강소기업탐방</b> 텍스트A타입</span><span class="price">상담후 책정</span></li>
+										<li><span class="product"><b>강소기업탐방</b> 인터뷰A타입</span><span class="price">상담후 책정</span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="btnArea">
+							<a href="/newsix/order3" class="btn btn-main btn-xs">보도신청</a>
+							<a href="/상담신청" class="btn btn-point btn-xs">상담신청</a>
+						</div>
+					</div>
+				</section>
+
+				<!-- 배너 - 회원가입 -->
+				<section class="banner-top" id="" data-appear-animation="fadeInUp">
+					<div class="container">
+						<div class="col-md-10 col-md-offset-2 col-xs-12 col-xs-offset-0">
+							<div class="row">
+								<div class="col-md-7 col-sm-7">
+									<div class="titleArea">
+										<p>지금 회원 가입 하시면 즉시 사용가능한 10000포인트를 적립해드립니다. 
+										<h3>회원가입 10,000포인트 적립</h3>
+									</div>
+								</div>
+								
+								<div class="col-md-3 col-sm-3">
+									<div class="btnArea">
+										<a href="http://enewsline.co.kr/join-form1" class="btn btn-main btn-xm">회원가입</a>
+									</div>
+								</div>	
+							</div>
+						</div>
+						
+					</div>
+				</section>
+
+				<!-- 리스트 - 3단 - 언론홍보 서비스 안내 -->
+				<section class="prdthumbanner" id="" data-appear-animation="fadeInUp">
+					<div class="container">
+						<div class="titleArea">
+							<h2>언론홍보 서비스 안내</h2>
+							<em class="line"></em>
+						</div>
+						<div class="row">
+							<div class="col-md-4 col-sm-12">
+								<div class="box">
+									<div class="col-md-12 col-sm-6">
+										<div class="thum">
+											<img src="http://enewsline.co.kr/data/media/image/001/201610/20161005140104556.jpg" alt="">
+										</div>
+									</div>
+									<div class="col-md-12 col-sm-6">
+										<div class="textArea">
+											<h4>맛방 먹방 쿡방</h4>
+											<p>인터뷰, 동영상을 가미한 현대인의 필수 콘텐츠 뉴스라인의 언론홍보 브랜드 PR 서비스</p>
+											<div class="btnArea">
+												<a href="/맛방먹방쿡방" class="btn btn-main btn-sl">바로가기</a>
+											</div>
+										</div>
+									</div>
+								</div>			
+							</div>
+							<div class="col-md-4 col-sm-12">
+								<div class="box">
+									<div class="col-md-12 col-sm-6">
+										<div class="thum">
+											<img src="http://enewsline.co.kr/data/media/image/001/201610/20161005140105455.jpg" alt="">
+										</div>
+									</div>
+									<div class="col-md-12 col-sm-6">
+										<div class="textArea">
+											<h4>강소기업탐방</h4>
+											<p>기업의 브랜드 이미지 확립 및 상승을 위한 뉴스라인의 언론홍보 브랜드 PR 서비스</p>
+											<div class="btnArea">
+												<a href="/강소기업탐방" class="btn btn-main btn-sl">바로가기</a>
+											</div>
+										</div>
+									</div>
+								</div>		
+							</div>
+							<div class="col-md-4 col-sm-12">
+								<div class="box">
+									<div class="col-md-12 col-sm-6">
+										<div class="thum">
+											<img src="http://enewsline.co.kr/data/media/image/001/201610/20161005140106845.jpg" alt="">
+										</div>
+									</div>
+									<div class="col-md-12 col-sm-6">
+										<div class="textArea">
+											<h4>언론홍보</h4>
+											<p>저비용고효율 마케팅 방법 언론홍보 마케팅 뉴스라인 언론홍보 서비스</p>
+											<div class="btnArea">
+												<a href="/언론홍보" class="btn btn-main btn-sl">바로가기</a>
+											</div>
+										</div>
+									</div>
+								</div>	
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- 배너 - 가성비 고효율 -->
+				<section class="banner_01" id="" data-appear-animation="fadeInUp">
+					<div class="container">
+						<div class="box">
+							<div class="col-md-6">
+								<div class="row">
+									<div class="titleArea">
+									<h2>뉴스라인 언론보도 <span>가성비 고효율</span> 서비스</h2>
+									<p><b>알아보기 힘든 보고서와 희미한 마케팅 효과에 지치셨나요?</b><br />
+									눈에 보이는 마케팅. 소비자가 가장 신뢰하는 언론보도 마케팅 지금 시작하세요.</p>
+							</div>
+							<div class="img01"><img src="http://enewsline.co.kr/data/media/image/001/201610/20161005140557587.png" alt=""></div>
+								</div>
+							</div>
+							<div class="col-md-6">	
+								<div class="row">
+									<div class="img02"><img src="http://enewsline.co.kr/data/media/image/001/201610/2016100514055781.png" alt=""></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- 배너 - 언론홍보는 e뉴스라인 -->
+				<section class="banner-bottom" id="" data-appear-animation="fadeInUp">
+					<div class="container">
+						<div class="box">
+							<div class="">
+								<img src="http://enewsline.co.kr/data/media/image/001/201610/20161005140057399.png" alt="">
+								<p>뉴스라인의 전문 보도진이 고객사의 성공을 위해 최선을 다하겠습니다.</p>
+							</div>
+							<div class="btnArea">
+								<a href="/newsix/order3" class="btn btn-main btn-xs">보도신청</a>
+								<a href="/상담신청" class="btn btn-point btn-xs">상담신청</a>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- 탭 - 언론사 배너 리스트 -->
+				<section class="prdtabbanner" id="" data-appear-animation="fadeInUp">
+					<div class="container">
+						<div class="preBoxtab">
+							<ul class="tab">
+								<li class="active">
+									<a href="#tab_01" data-toggle="tab" class="">일반</a>
+								</li>
+								<li class="">
+									<a href="#tab_02" data-toggle="tab" class="">병원</a>
+								</li>
+								<li class="">
+									<a href="#tab_03" data-toggle="tab" class="">창업</a>
+								</li>
+								<li class="">
+									<a href="#tab_04" data-toggle="tab" class="">부동산</a>
+								</li>
+								<li class="">
+									<a href="#tab_05" data-toggle="tab" class="">부동산(배너)</a>
+								</li>
+								<li class="">
+									<a href="#tab_06" data-toggle="tab" class="">특수키워드</a>
+								</li>
+							</ul>
+							<div class="tab-content">
+								<div class="tab-pane active" id="tab_01">
+									<div class="row">
+										<ul>
+											<li class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+												<div class="prdBox">
+													<div class="banner"><img src="http://enewsline.co.kr/data/media/image/logo/201609/20160927162915829.jpg" alt=""></div>
+													<div class="prdInfo">
+														<h5>아이티비즈</h5>
+														<div class="detail">다음/네이트,예약</div>
+														<div class="price">00,000</div>
+													</div>
+												</div>
+											</li>
+											<li class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+												<div class="prdBox">
+													<div class="banner"><img src="" alt=""></div>
+													<div class="prdInfo">
+														<h5>한국금융신문</h5>
+														<div class="detail">다음/네이트,예약</div>
+														<div class="price">00,000</div>
+													</div>
+												</div>
+											</li>
+											<li class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+												<div class="prdBox">
+													<div class="banner"><img src="http://enewsline.co.kr/data/media/image/logo/201609/2016092717082090.jpg" alt=""></div>
+													<div class="prdInfo">
+														<h5>업코리아</h5>
+														<div class="detail">다음/네이트,예약</div>
+														<div class="price">00,000</div>
+													</div>
+												</div>
+											</li>
+											<li class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+												<div class="prdBox">
+													<div class="banner"><img src="http://enewsline.co.kr/data/media/image/logo/201609/2016092717082080.jpg" alt=""></div>
+													<div class="prdInfo">
+														<h5>문화저널21</h5>
+														<div class="detail">다음/네이트,예약</div>
+														<div class="price">00,000</div>
+													</div>
+												</div>
+											</li>
+											<li class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+												<div class="prdBox">
+													<div class="banner"><img src="http://enewsline.co.kr/data/media/image/logo/201609/20160927170821143.jpg" alt=""></div>
+													<div class="prdInfo">
+														<h5>데일리그리드</h5>
+														<div class="detail">다음/네이트,예약</div>
+														<div class="price">00,000</div>
+													</div>
+												</div>
+											</li>
+											<li class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+												<div class="prdBox">
+													<div class="banner"><img src="http://enewsline.co.kr/data/media/image/logo/201609/20160927170821677.jpg" alt=""></div>
+													<div class="prdInfo">
+														<h5>디트뉴스24</h5>
+														<div class="detail">다음/네이트,예약</div>
+														<div class="price">00,000</div>
+													</div>
+												</div>
+											</li>
+											<li class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+												<div class="prdBox">
+													<div class="banner"><img src="http://enewsline.co.kr/data/media/image/logo/201609/20160927162915829.jpg" alt=""></div>
+													<div class="prdInfo">
+														<h5>아이티비즈</h5>
+														<div class="detail">다음/네이트,예약</div>
+														<div class="price">00,000</div>
+													</div>
+												</div>
+											</li>
+											<li class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+												<div class="prdBox">
+													<div class="banner"><img src="" alt=""></div>
+													<div class="prdInfo">
+														<h5>한국금융신문</h5>
+														<div class="detail">다음/네이트,예약</div>
+														<div class="price">00,000</div>
+													</div>
+												</div>
+											</li>
+											<li class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+												<div class="prdBox">
+													<div class="banner"><img src="http://enewsline.co.kr/data/media/image/logo/201609/2016092717082090.jpg" alt=""></div>
+													<div class="prdInfo">
+														<h5>업코리아</h5>
+														<div class="detail">다음/네이트,예약</div>
+														<div class="price">00,000</div>
+													</div>
+												</div>
+											</li>
+											<li class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+												<div class="prdBox">
+													<div class="banner"><img src="http://enewsline.co.kr/data/media/image/logo/201609/2016092717082080.jpg" alt=""></div>
+													<div class="prdInfo">
+														<h5>문화저널21</h5>
+														<div class="detail">다음/네이트,예약</div>
+														<div class="price">00,000</div>
+													</div>
+												</div>
+											</li>
+											<li class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+												<div class="prdBox">
+													<div class="banner"><img src="http://enewsline.co.kr/data/media/image/logo/201609/20160927170821143.jpg" alt=""></div>
+													<div class="prdInfo">
+														<h5>데일리그리드</h5>
+														<div class="detail">다음/네이트,예약</div>
+														<div class="price">00,000</div>
+													</div>
+												</div>
+											</li>
+											<li class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+												<div class="prdBox">
+													<div class="banner"><img src="http://enewsline.co.kr/data/media/image/logo/201609/20160927170821677.jpg" alt=""></div>
+													<div class="prdInfo">
+														<h5>디트뉴스24</h5>
+														<div class="detail">다음/네이트,예약</div>
+														<div class="price">00,000</div>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="tab-pane" id="tab_02">
+									<div class="row">
+										<ul>
+											<li class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+												<div class="prdBox">
+													<div class="banner"><img src="http://enewsline.co.kr/data/media/image/logo/201609/2016092717082090.jpg" alt=""></div>
+													<div class="prdInfo">
+														<h5>업코리아</h5>
+														<div class="detail">다음/네이트,예약</div>
+														<div class="price">00,000</div>
+													</div>
+												</div>
+											</li>
+											<li class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+												<div class="prdBox">
+													<div class="banner"><img src="http://enewsline.co.kr/data/media/image/logo/201609/2016092717082080.jpg" alt=""></div>
+													<div class="prdInfo">
+														<h5>문화저널21</h5>
+														<div class="detail">다음/네이트,예약</div>
+														<div class="price">00,000</div>
+													</div>
+												</div>
+											</li>
+											<li class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+												<div class="prdBox">
+													<div class="banner"><img src="http://enewsline.co.kr/data/media/image/logo/201609/20160927170821143.jpg" alt=""></div>
+													<div class="prdInfo">
+														<h5>데일리그리드</h5>
+														<div class="detail">다음/네이트,예약</div>
+														<div class="price">00,000</div>
+													</div>
+												</div>
+											</li>
+											<li class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+												<div class="prdBox">
+													<div class="banner"><img src="http://enewsline.co.kr/data/media/image/logo/201609/20160927170821677.jpg" alt=""></div>
+													<div class="prdInfo">
+														<h5>디트뉴스24</h5>
+														<div class="detail">다음/네이트,예약</div>
+														<div class="price">00,000</div>
+													</div>
+												</div>
+											</li>
+											<li class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+												<div class="prdBox">
+													<div class="banner"><img src="http://enewsline.co.kr/data/media/image/logo/201609/20160927162915829.jpg" alt=""></div>
+													<div class="prdInfo">
+														<h5>아이티비즈</h5>
+														<div class="detail">다음/네이트,예약</div>
+														<div class="price">00,000</div>
+													</div>
+												</div>
+											</li>
+											<li class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+												<div class="prdBox">
+													<div class="banner"><img src="" alt=""></div>
+													<div class="prdInfo">
+														<h5>한국금융신문</h5>
+														<div class="detail">다음/네이트,예약</div>
+														<div class="price">00,000</div>
+													</div>
+												</div>
+											</li>
+											<li class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+												<div class="prdBox">
+													<div class="banner"><img src="http://enewsline.co.kr/data/media/image/logo/201609/2016092717082090.jpg" alt=""></div>
+													<div class="prdInfo">
+														<h5>업코리아</h5>
+														<div class="detail">다음/네이트,예약</div>
+														<div class="price">00,000</div>
+													</div>
+												</div>
+											</li>
+											<li class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+												<div class="prdBox">
+													<div class="banner"><img src="http://enewsline.co.kr/data/media/image/logo/201609/2016092717082080.jpg" alt=""></div>
+													<div class="prdInfo">
+														<h5>문화저널21</h5>
+														<div class="detail">다음/네이트,예약</div>
+														<div class="price">00,000</div>
+													</div>
+												</div>
+											</li>
+											<li class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+												<div class="prdBox">
+													<div class="banner"><img src="http://enewsline.co.kr/data/media/image/logo/201609/20160927170821143.jpg" alt=""></div>
+													<div class="prdInfo">
+														<h5>데일리그리드</h5>
+														<div class="detail">다음/네이트,예약</div>
+														<div class="price">00,000</div>
+													</div>
+												</div>
+											</li>
+											<li class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+												<div class="prdBox">
+													<div class="banner"><img src="http://enewsline.co.kr/data/media/image/logo/201609/20160927170821677.jpg" alt=""></div>
+													<div class="prdInfo">
+														<h5>디트뉴스24</h5>
+														<div class="detail">다음/네이트,예약</div>
+														<div class="price">00,000</div>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- 최근게시물 - 보도자료 -->
+				<section class="list-media" data-appear-animation="fadeInUp">
+					<div class="container">
+						<div class="row">
+							<div class="titleArea">
+								<h2>보도자료</h2>
+								<em class="line"></em>
+							</div>
+							<div class="list">
+								<ul>
+									<li class="col-md-3 col-sm-12">
+										<div class="col-md-12 col-sm-6">
+											<div class="thum">
+												<img src="http://enewsline.co.kr/data/media/image/001/201610/20161005140112515.jpg" alt="">
+											</div>
+										</div>
+										<div class="col-md-12 col-sm-6">
+											<div class="textArea">
+												<h4>새롭게 뜨는 캐나다 이민의 방향을 제시한다. 하반기 캐나다이민 박람회 개최 - 하반기 캐나다이민 박람회 개최</h4>
+												<p>보다 살기 좋은 나라, 무언가 필요한 나라로 가기 위한 이민이 활발해 지는 것도 보다 살기 좋은 나라, 무언가 필요한 나라로 가기 위한 이민이 활발해 지는 것도 보다 살기 좋은 나라, 무언가 필요한 나라로 가기 위한 이민이 활발해 지는 것도 보다 살기 좋은 나라, 무언가 필요한 나라로 가기 위한 이민이 활발해 지는 것도</p>
+												<span class="date">2016.10.10</span>
+											</div>
+										</div>
+									</li>
+									<li class="col-md-3 col-sm-12">
+										<div class="col-md-12 col-sm-6">
+											<div class="thum">
+												<img src="http://enewsline.co.kr/data/media/image/001/201610/20161005140112515.jpg" alt="">
+											</div>
+										</div>
+										<div class="col-md-12 col-sm-6">
+											<div class="textArea">
+												<h4>새롭게 뜨는 캐나다 이민의 방향을 제시한다. 하반기 캐나다이민 박람회 개최 - 하반기 캐나다이민 박람회 개최</h4>
+												<p>보다 살기 좋은 나라, 무언가 필요한 나라로 가기 위한 이민이 활발해 지는 것도 보다 살기 좋은 나라, 무언가 필요한 나라로 가기 위한 이민이 활발해 지는 것도 보다 살기 좋은 나라, 무언가 필요한 나라로 가기 위한 이민이 활발해 지는 것도 보다 살기 좋은 나라, 무언가 필요한 나라로 가기 위한 이민이 활발해 지는 것도</p>
+												<span class="date">2016.10.10</span>
+											</div>
+										</div>
+									</li>
+									<li class="col-md-3 col-sm-12">
+										<div class="col-md-12 col-sm-6">
+											<div class="thum">
+												<img src="http://enewsline.co.kr/data/media/image/001/201610/20161005140112515.jpg" alt="">
+											</div>
+										</div>
+										<div class="col-md-12 col-sm-6">
+											<div class="textArea">
+												<h4>새롭게 뜨는 캐나다 이민의 방향을 제시한다. 하반기 캐나다이민 박람회 개최 - 하반기 캐나다이민 박람회 개최</h4>
+												<p>보다 살기 좋은 나라, 무언가 필요한 나라로 가기 위한 이민이 활발해 지는 것도 보다 살기 좋은 나라, 무언가 필요한 나라로 가기 위한 이민이 활발해 지는 것도 보다 살기 좋은 나라, 무언가 필요한 나라로 가기 위한 이민이 활발해 지는 것도 보다 살기 좋은 나라, 무언가 필요한 나라로 가기 위한 이민이 활발해 지는 것도</p>
+												<span class="date">2016.10.10</span>
+											</div>
+										</div>
+									</li>
+									<li class="col-md-3 col-sm-12">
+										<div class="col-md-12 col-sm-6">
+											<div class="thum">
+												<img src="http://enewsline.co.kr/data/media/image/001/201610/20161005140112515.jpg" alt="">
+											</div>
+										</div>
+										<div class="col-md-12 col-sm-6">
+											<div class="textArea">
+												<h4>새롭게 뜨는 캐나다 이민의 방향을 제시한다. 하반기 캐나다이민 박람회 개최 - 하반기 캐나다이민 박람회 개최</h4>
+												<p>보다 살기 좋은 나라, 무언가 필요한 나라로 가기 위한 이민이 활발해 지는 것도 보다 살기 좋은 나라, 무언가 필요한 나라로 가기 위한 이민이 활발해 지는 것도 보다 살기 좋은 나라, 무언가 필요한 나라로 가기 위한 이민이 활발해 지는 것도 보다 살기 좋은 나라, 무언가 필요한 나라로 가기 위한 이민이 활발해 지는 것도</p>
+												<span class="date">2016.10.10</span>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+				
+				<!-- 언론사 배너 - 슬라이드  -->
+				<section class="list-banner-slide" data-appear-animation="fadeInUp">
+					<div class="container">
+						[widget id='w1472658105925']언론사 배너[/widget]
+					</div>
+				</section>
+
+			</div>
+ 
+			<footer id="footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3">
+							<div class="aboutus">
+								<h4 class="mb-sm">e뉴스라인</h4>
+								<p class="mb-none">뉴스라인의 전문 기자진이 고객사의 성공을 위해서 힘쓰고 있습니다. 정확하고 효율적인 언론홍보를 위해 노력하겠습니다.</p>
+								<ul class="list">
+									<li><i class="fa fa-envelope"></i> <a href="mailto:news@pcss.co.kr">news@pcss.co.kr</a></li>
+									<li><i class="fa fa-phone"></i> P : 070-7734-0098</li>
+									<li><i class="fa fa-building"></i> 서울특별시 강남구 봉은사로 18길, 4</li>
+								</ul>
+							</div>
+						</div>
+ 						<div class="col-md-3">
+ 							<div class="sitelink">
+ 							<h4>사이트링크</h4>
+								<nav>
+									<div class="col-md-6">
+										<div class="row">
+											<ul class="list">
+												<li><a href="/newsix/order3"><i class="fa fa-angle-double-right" aria-hidden="true"></i> 보도신청</a></li>
+												<li><a href="/언론홍보"><i class="fa fa-angle-double-right" aria-hidden="true"></i> 언론홍보</a></li>
+												<li><a href="/보도분야"><i class="fa fa-angle-double-right" aria-hidden="true"></i> 보도분야</a></li>
+												<li><a href="/보도자료"><i class="fa fa-angle-double-right" aria-hidden="true"></i> 보도자료</a></li>
+												<li><a href="/고객센터"><i class="fa fa-angle-double-right" aria-hidden="true"></i> 고객센터</a></li>
+												<li><a href="/board/list/15"><i class="fa fa-angle-double-right" aria-hidden="true"></i> 공지사항</a></li>
+												<li><a href="/상담신청"><i class="fa fa-angle-double-right" aria-hidden="true"></i> 상담신청</a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="row">
+											<ul class="list">
+												<li><a href="/맛방먹방쿡방"><i class="fa fa-angle-double-right" aria-hidden="true"></i> 맛방먹방쿡방</a></li>
+												<li><a href="/강소기업탐방"><i class="fa fa-angle-double-right" aria-hidden="true"></i> 강소기업탐방</a></li>
+												<li><a href="/동영상기사"><i class="fa fa-angle-double-right" aria-hidden="true"></i> 동영상기사</a></li>
+												<li><a href="/인터뷰기사"><i class="fa fa-angle-double-right" aria-hidden="true"></i> 인터뷰기사</a></li>
+											</ul>
+										</div>
+									</div>
+								</nav>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="notice">
+								<h4 class="mb-sm">공지시항</h4>
+								<ul class="list">
+									<li><a href=""><i class="fa fa-caret-right" aria-hidden="true"></i> 특수 키워드가 가능해졌습니다.</a></li>
+									<li><a href=""><i class="fa fa-caret-right" aria-hidden="true"></i> A그룹이 부활되었습니다.</a></li>
+									<li><a href=""><i class="fa fa-caret-right" aria-hidden="true"></i> 병원기사 가격이 인상 되었습니다.</a></li>
+									<li><a href=""><i class="fa fa-caret-right" aria-hidden="true"></i> A그룹,B그룹 렌덤과 배너가 일시 중지...</a></li>
+									<li><a href=""><i class="fa fa-caret-right" aria-hidden="true"></i> A그룹,B그룹 렌덤과 배너가 일시 중지...</a></li>
+								</ul>
+								<a href="/board/list/15">view more...</a>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="col-md-12">
+								<div class="row">
+									<div class="btnArea left">
+										<a href="/newsix/order3" class="btn btn-main btn-footer-01"><span><i class="fa fa-pencil" aria-hidden="true"></i></span>보도신청</a>
+										<a href="/상담신청" class="btn btn-main btn-footer-01"><span><i class="fa fa-phone" aria-hidden="true"></i></span>상담신청</a>
+										<a href="/보도신청" class="btn btn-main btn-footer-01"><span><i class="fa fa-money" aria-hidden="true"></i></span>포인트충전</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="row">
+									<div class="pp-keywords">
+										<h5>인기 키워드</h5>
+										<span>병원</span>
+										<span>성형</span>
+										<span>창업</span>
+										<span>라미네이트</span>
+										<span>중고차</span>
+										<span>병원</span>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer-copyright">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-2">
+								<a href="index.html" class="logo"></a>
+							</div>
+							<div class="col-md-6">
+								<p>Copyright 2016 © Newsline . All Rights Reserved.</p>
+							</div>
+							<div class="col-md-4">
+								<nav id="sub-menu">
+									<ul>
+										<li><a href="page-faq.html">회사소개</a></li>
+										<li><a href="sitemap.html">이용안내</a></li>
+										<li><a href="contact-us.html">개인정보취급방침</a></li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+
+		<!-- Vendor -->
+		<script src="vendor/jquery/jquery.min.js"></script>
+		<script src="vendor/jquery.appear/jquery.appear.min.js"></script>
+		<script src="vendor/jquery.easing/jquery.easing.min.js"></script>
+		<script src="vendor/jquery-cookie/jquery-cookie.min.js"></script>
+		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+		<script src="vendor/common/common.min.js"></script>
+		<script src="vendor/jquery.validation/jquery.validation.min.js"></script>
+		<script src="vendor/jquery.easy-pie-chart/jquery.easy-pie-chart.min.js"></script>
+		<script src="vendor/jquery.gmap/jquery.gmap.min.js"></script>
+		<script src="vendor/jquery.lazyload/jquery.lazyload.min.js"></script>
+		<script src="vendor/isotope/jquery.isotope.min.js"></script>
+		<script src="vendor/owl.carousel/owl.carousel.min.js"></script>
+		<script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+		<script src="vendor/vide/vide.min.js"></script>
+		
+		<!-- Theme Base, Components and Settings -->
+		<script src="js/theme.js"></script>
+		
+		<!-- Current Page Vendor and Views -->
+		<script src="vendor/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+		<script src="vendor/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+		<script src="vendor/circle-flip-slideshow/js/jquery.flipshow.min.js"></script>
+		<script src="js/views/view.home.js"></script>
+		
+		<!-- Theme Custom -->
+		<script src="js/custom.js"></script>
+		
+		<!-- Theme Initialization Files -->
+		<script src="js/theme.init.js"></script>
+
+		<!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information.
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		
+			ga('create', 'UA-12345678-1', 'auto');
+			ga('send', 'pageview');
+		</script>
+		 -->
+
+	</body>
+</html>

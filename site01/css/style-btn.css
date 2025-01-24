@@ -1,0 +1,169 @@
+/*base*/
+.dn {display:none;}
+
+
+	/*icon*/
+	.i {
+		font-family: 'notokr-thin';
+		display:inline-block;
+		border-style:solid;
+		border-width: 1px;
+		vertical-align: middle;
+		cursor: default;
+		text-align: center;
+		color:#000;
+		border-color:#ddd;
+		margin:0 auto;
+		background-color: #fff;
+	}
+	.i.radius {
+		border-radius:6px;
+	}
+	/*size*/
+	.i.i-xs {
+		font-size:11px;
+		padding:3px 3px;
+		line-height: 1em;
+	}
+	.i.i-sm {
+		font-size:15px;
+		padding:5px 10px;
+		line-height: 1em;
+	}
+
+	/*color*/
+	.i.i-b {
+		color:#fff;
+		border-color:#555;
+		background-color:#555;
+	}
+
+
+	/*button*/
+	.btnArea {
+		text-align:center;
+	}
+	.btnArea.left {
+		text-align:left;
+	}
+	.btnArea.right {
+		text-align:right;
+	}
+
+	.btn {
+		display:inline-block;
+		border-style:solid;
+		border-width: 1px;
+		border-radius: 0;
+		vertical-align: middle;
+		touch-action: manipulation;
+		cursor: pointer;
+		text-align: center;
+		color:#000;
+		border-color:#ddd;
+	}
+	.btn.radius {
+		border-radius:6px;
+	}
+
+	.btn.mt {
+		margin:0;
+	}
+	/*size*/
+	.btn.btn-xl {
+		font-size:26px;
+		line-height: 67px;
+		padding:0 30px;
+		height:67px;
+	}
+	.btn.btn-xm {
+		font-size:20px;
+		font-weight: 100;
+		line-height: 57px;
+		padding:0 30px;
+		height:57px;
+	}
+	.btn.btn-xs {
+		font-size:16px;
+		font-weight: 100;
+		line-height: 47px;
+		padding:0 30px;
+		height:47px;
+	}
+	.btn.btn-ml {
+		font-size:16px;
+		padding:5px 10px;
+		line-height: 1em;
+	}
+	.btn.btn-mm {
+		font-size:15px;
+		padding:5px 10px;
+		line-height: 1em;
+	}
+	.btn.btn-ms {
+		font-size:14px;
+		padding:5px 10px;
+		line-height: 1em;
+	}
+	.btn.btn-sl {
+		font-size:13px;
+		padding:5px 10px;
+		line-height: 1em;
+	}
+	.btn.btn-sm {
+		font-size:12px;
+		padding:5px 10px;
+		line-height: 1em;
+	}
+	.btn.btn-ss {
+		font-size:11px;
+		padding:3px 3px;
+		line-height: 1em;
+	}
+
+
+	.btn.wide {
+		width:100%;
+	}
+
+	/*color*/
+	.btn.btn-main {
+		color:#fff;
+		border-color:#28a7e1;
+		background-color:#28a7e1;
+	}
+	.btn.btn-point {
+		color:#fff;
+		border-color:#e64057;
+		background-color:#e64057;
+	}
+	.btn.btn-gray {
+		color:#fff;
+		border-color:#999;
+		background-color:#999;
+	}
+	.btn.btn-dark {
+		color:#fff;
+		border-color:#555;
+		background-color:#555;
+	}
+	.btn.btn-b {
+		color:#fff;
+		border-color:#555;
+		background-color:#555;
+	}
+	.btn.btn-sub01 {
+		color:#fff;
+		border-color:#47C5FF;
+		background-color:#47C5FF;
+	}
+	.btn.btn-sub02 {
+		color:#fff;
+		border-color:#E18C28;
+		background-color:#E18C28;
+	}
+	.btn.btn-sub03 {
+		color:#fff;
+		border-color:#2F5261;
+		background-color:#2F5261;
+	}
